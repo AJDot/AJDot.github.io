@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="assets/stylesheets/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/javascripts/main.js"></script>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+        <li>
+          <a href="#" data-title="bio">
+            Biography
+            <img src="assets/images/biography.svg" alt="Biography" title="Biography">
+          </a>
+        </li>
+        <li>
+          <a href="#" data-title="education">
+            Education
+            <img src="assets/images/education.svg" alt="Education" title="Education">
+          </a>
+        </li>
+        <li>
+          <a href="#" data-title="experience">
+            Experience
+            <img src="assets/images/experience.svg" alt="Experience" title="Experience">
+          </a>
+        </li>
+        <li>
+          <a href="#" data-title="projects">
+            Projects
+            <img src="assets/images/projects.svg" alt="Projects" title="Projects">
+          </a>
+        </li>
+        <li>
+          <a href="#" data-title="contact">
+            Contact
+            <img src="assets/images/contact.svg" alt="Contact" title="Contact">
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <header>
+        <h1>First Last Name</h1>
+      </header>
+      <div class="content">
+        <article data-title="projects">
+          <h2>Projects</h2>
+          <ul>
+            <li>Project Cards - darkened background image of project. Text overlay with title and other info.</li>
+            <li>Individual project pages discuss the project, its features, difficulties, etc.</li>
+            <li>Filtering at top for each language.</li>
+          </ul>
+          <div id="cardBox">
+
+            <script id="cards_template" type="text/x-handlebars">
+              {{#each cards}}
+                {{> card_partial}}
+              {{/each}}
+            </script>
+
+            <script id="card_partial" data-type="partial" type="text/x-handlebars">
+              <div class="card-container">
+                <div class="card">
+                  <div class="front">
+                    <img src="{{imgSource}}&sz=w700-h700">
+                    <div class="front-overlay"></div>
+                  </div>
+                  <div class="back">
+                    <h3>{{name}}</h3>
+                    <a href="{{locationLive}}" target="_blank" class="card-link">{{locationLiveTitle}}</a>
+                    <a href="{{locationSource}}" target="_blank" class="card-link">{{locationSourceTitle}}</a>
+                    <h4>Key Skills</h4>
+                    <ul>
+                      {{#each skills}}
+                        {{> skill_partial}}
+                      {{/each}}
+                    </ul>
+                    <h4>Key Features</h4>
+                    <ul>
+                      {{#each features}}
+                        {{> feature_partial}}
+                      {{/each}}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </script>
+
+            <script id="skill_partial" data-type="partial" type="text/x-handlebars">
+                <li>{{this}}</li>
+            </script>
+
+            <script id="feature_partial" data-type="partial" type="text/x-handlebars">
+                <li>{{this}}</li>
+            </script>
+
+          </div>
+        </article>
+        <article data-title="contact">
+          <h3>Like what you've seen? Think I may enjoy contributing at your company?</h3>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeZNJzImDdn9jEYgpRvElGXnyIb5K5mXLAmDSz1ipDTcVaDtQ/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        </article>
+        <article data-title="education">
+          <h2>Education</h2>
+          <div class="school">
+            <h3>University of Maryland, Baltimore County (UMBC) <small>Baltimore, Maryland</small></h3>
+            <section class="school-section">
+              <ul>
+                <li>PhD in Physics <small>(3.85/4.00)</small> <span class="date"><time datetime="2010-08">Aug 2010</time> - <time datetime="2015-12">Dec 2015</time></span></li>
+                <li>M.S. in Physics <span class="date"><time datetime="2010-08">Aug 2010</time> - <time datetime="2012-05">May 2012</time></span></li>
+              </ul>
+            </section>
+          </div>
+          <div class="school">
+            <h3>Eastern Kentucky University (EKU) <small>Richmond, Kentucky</small></h3>
+            <section class="school-section">
+              <ul>
+                <li>B.S. in Physics, Summa Cum Laude <small>(3.93/4.00)</small> <span class="date"><time datetime="2006-08">Aug 2006</time> - <time datetime="2010-05">May 2010</time></span></li>
+                <li>Minor in Mathematics</li>
+              </ul>
+            </section>
+          </div>
+          <hr />
+          <div class="old-exp">
+            <h3>Research Experience</h3>
+            <section class="old-exp-section">
+              <ul>
+                <li>Doctoral Research <span class="date"><time datetime="2012-08">Aug 2012</time> - <time datetime="2015-12">Dec 2015</time></span> <small>(UMBC)</small></li>
+                <li>Research Adviser: Dr. Theodosia Gougousi</li>
+              </ul>
+              <ul class="exp-details">
+                <li>First author on four and second author on two scientific journal publications.</li>
+                <li>Presented my work either times at international conferences.</li>
+                <li>Investigated surface chemistry and interface evolution during the atomic layer deposition of metal oxides on InAs(100) and GaAs(100).</li>
+                <li>Diffusion of surface oxides during the ALD of dielectrics on III-V substrates</li>
+                <li>Characterized TiO<sub>2</sub> film crystallization, stabilization, and reactivity.</li>
+                <li>Collaborated with researchers at UMBC, George Mason University, and Johns Hopkins University.</li>
+                <li>Mentored two undergraduate and two graduate students on their own projects. I taught them lab safety, vacuum technology, how to operate the ALD reactor and characterization tools (FTIR, AFM, SE, SEM), and how to analyze data with emphasis on FTIR and XPS.</li>
+              </ul>
+            </section>
+            <section class="old-exp-section">
+              <ul>
+                <li>Research Experience for Undergraduates <span class="date"><time datetime="2009-06">Jun</time> - <time datetime="2009-07">Jul 2009</time></span> <small>(Vanderbilt University)</small></li>
+                <li>Research Adviser: Dr. Richard Haglund</li>
+              </ul>
+              <ul>
+                <li>Research ranged from the fabrication of nanoscale gold metamaterials to the analysis of data from white light extinction spectra obtained. Presented senior thesis at EKU in May of 2010.</li>
+              </ul>
+            </section>
+          </div>
+          <hr />
+          <div class="old-exp">
+            <h3>Teaching Experience</h3>
+            <section class="old-exp-section">
+              <ul>
+                <li>Director of Tutoring and Test Prep <span class="date"><time datetime="2016-08">Aug 2016</time> - <time datetime="2017-08">Aug 2017</time></span> <small>(Math ETC, Bowie, MD)</small></li>
+                <li>Supervisor: Johanna Ihegihu</li>
+              </ul>
+              <ul class="exp-details">
+                <li>Managed instructors including schedules and curriculum for tutoring students in grades K – college.</li>
+                <li>Constructed standard procedures to increase the efficiency and functionality of the company.</li>
+                <li>Hired new math instructors.</li>
+                <li>Headed the standardized test prep classes and curriculum for students intending to test into private middle schools, private high schools, and college.</li>
+              </ul>
+            </section>
+            <section class="old-exp-section">
+              <ul>
+                <li>Math Instructor <span class="date"><time datetime="2016-06">Jun</time> - <time datetime="2016-08">Aug 2016</time></span> <small>(Math ETC, Bowie, MD)</small></li>
+                <li>Supervisor: Johanna Ihegihu</li>
+              </ul>
+              <ul class="exp-details">
+                <li>Tutored students in math up through Calculus, and physics, 10-25 hours/week.</li>
+              </ul>
+            </section>
+            <section class="old-exp-section">
+              <ul>
+                <li>Teaching Assistant and Tutor <span class="date"><time datetime="2010-08">Aug 2010</time> - <time datetime="2012-07">Jul 2012</time></span> <small>(UMBC)</small></li>
+                <li>Adviser: Dr. Lili Cui</li>
+              </ul>
+              <ul class="exp-details">
+                <li>Prepared labs and discussion activities using WebAssign and VPython.</li>
+                <li>Assisted the professor during calculus-based intro physics class of 25-100 students.</li>
+                <li>Tutoring was for an open session for all physics courses. Worked 15-20 hours/week.</li>
+              </ul>
+            </section>
+            <section class="old-exp-section">
+              <ul>
+                <li>Teaching Assistant and Tutor <span class="date"><time datetime="2008-08">Aug 2008</time> - <time datetime="2009-05">May 2009</time></span> <small>(EKU)</small></li>
+              </ul>
+              <ul class="exp-details">
+                <li>Inquiry Physics for Teachers: Assisted the professor with physics exercises for education majors.</li>
+                <li>Tutoring for introductory physics courses was an open session three hours/week.</li>
+              </ul>
+            </section>
+          </div>
+        </article>
+        <article data-title="experience">
+          <h2>Experience</h2>
+          <div class="skill">
+            <h3><a href="#" data-skill-heading="ruby">Ruby</a></h3>
+            <section class="skill-section" data-skill="ruby">
+              <div class="skill-list">
+                <h4>1 year of study through <a href="https://www.launchschool.com">Launch School</a></h4>
+                <ul class="skills">
+                  <li>Core knowledge: syntax, logic, etc.</li>
+                  <li>Procedural Programming and OOP, Inheritance</li>
+                  <li>Instance/Class Variables, blocks/procs/lambdas</li>
+                  <li>Regular Expressions</li>
+                  <li>Minitest</li>
+                  <li>Sinatra</li>
+                  <li>ERB</li>
+                  <li>Ruby on Rails</li>
+                </ul>
+              </div>
+              <div class="skill-list">
+                <h4>Example Terminal Projects</h4>
+                <ul class="skills-projects">
+                  <li>Rock Paper Scissors Lizard Spock (Procedural and OOP)</li>
+                  <li>Twenty-One</li>
+                  <li>Tic-Tac-Toe</li>
+                  <li>Guess Who</li>
+                  <li>Connect 4</li>
+                </ul>
+              </div>
+              <div class="skill-list">
+                <h4>Example Web Applications</h4>
+                <ul class="skills-projects">
+                  <li>Photography Site</li>
+                  <li>PostIt!</li>
+                  <li>Recipe Manager</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <div class="skill">
+            <h3><a href="#" data-skill-heading="ror">Ruby on Rails</a></h3>
+            <section class="skill-section" data-skill="ror">
+              <div class="skill-list">
+                <h4>1 month of study through <a href="https://www.launchschool.com">Launch School</a></h4>
+                <ul class="skills">
+                  <li>Core knowledge: syntax, logic, etc.</li>
+                  <li>Active Record and database associations</li>
+                  <li>REST</li>
+                  <li>AJAX</li>
+                  <li>partials, helpers, filters, form, validations, callbacks, roles</li>
+                </ul>
+              </div>
+              <div class="skill-list">
+                <h4>Example Projects</h4>
+                <ul class="skills-projects">
+                  <li>PostIt!</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <div class="skill">
+            <h3><a href="#" data-skill-heading="js">JavaScript</a></h3>
+            <section class="skill-section" data-skill="js">
+              <div class="skill-list">
+                <h4>6 months of study through <a href="https://www.launchschool.com">Launch School</a></h4>
+                <ul class="skills">
+                  <li>Core knowledge: syntax, logic, etc.</li>
+                  <li>Primitives & Objects</li>
+                  <li>Mutataions</li>
+                  <li>Variable Scope, Function Scope & Closures</li>
+                  <li>Closures & Private Data</li>
+                  <li>Functional Abstractions & Declarative Programming</li>
+                  <li>Higher Order Functions</li>
+                  <li>Event-Driven and Asynchronous Programming</li>
+                  <li>Pseudo-classical & OLOO object creation patterns</li>
+                  <li>Working with RESTful APIs</li>
+                  <li>AJAX</li>
+                  <li>jQuery</li>
+                  <li>Handlebars</li>
+                </ul>
+              </div>
+              <div class="skill-list">
+                <h4>Example Projects</h4>
+                <ul class="skills-projects">
+                  <li>Photography Site</li>
+                  <li>Calculator</li>
+                  <li>Dictionary</li>
+                  <li>Todo Lists</li>
+                  <li>Contact Manager</li>
+                  <li>Ising Model</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <div class="skill">
+            <h3><a href="#" data-skill-heading="htmlcss">HTML/CSS</a></h3>
+            <section class="skill-section" data-skill="htmlcss">
+              <div class="skill-list">
+                <h4>6 months of study through <a href="https://www.launchschool.com">Launch School</a></h4>
+                <ul class="skills">
+                  <li>Core knowledge: syntax, logic, etc.</li>
+                  <li>Block model</li>
+                  <li>Semantics</li>
+                  <li>Convert photoshop design files to HTML/CSS</li>
+                </ul>
+              </div>
+              <div class="skill-list">
+                <h4>Example Projects</h4>
+                <ul class="skills-projects">
+                  <li>Photography Site</li>
+                  <li>Todos List</li>
+                </ul>
+              </div>
+              <div class="skill-list">
+                <h4>Example Snippets</h4>
+                <ul class="skills-projects">
+                  <li>Nutrition Facts Label</li>
+                  <li>Mock Company Site (PSD to HTML/CSS) (SpaceDesign)</li>
+                  <li>Shutterbug (PSD to HTML/CSS)</li>
+                  <li>Form Layout & Design (From 201 Lesson 6)</li>
+                  <li>JS Conf BR 2014 (Clone of http://2014.jsconfbr.org/)</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <div class="skill">
+            <h3><a href="#" data-skill-heading="sql">SQL</a></h3>
+            <section class="skill-section" data-skill="sql">
+              <div class="skill-list">
+                <h4>2 months of study through <a href="https://www.launchschool.com">Launch School</a></h4>
+                <ul class="skills">
+                  <li>Core knowledge: syntax, logic, etc.</li>
+                  <li>PostgreSQL (and PG gem)</li>
+                  <li>Conceptual & Physical Schema</li>
+                  <li>Sublanguages: DDL, DCL, DML</li>
+                  <li>Construct relations, keys, constraints, sequences, defaults</li>
+                  <li>JOINs (inner, left outer, right outer)</li>
+                  <li>Create database-back web applications</li>
+                </ul>
+              </div>
+              <div class="skill-list">
+                <h4>Example Projects</h4>
+                <ul class="skills-projects">
+                  <li>Recipe Manager</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <div class="skill">
+            <h3><a href="#" data-skill-heading="http">HTTP</a></h3>
+            <section class="skill-section" data-skill="http">
+              <div class="skill-list">
+                <ul class="skills">
+                  <li>Making requests / processing responses manually</li>
+                  <li>Request/Response Cycle</li>
+                  <li>Stateful Application</li>
+                  <li>Sessions, cookies, AJAX</li>
+                </ul>
+              </div>
+              <div class="skill-list">
+                <h4>Example Web Applications</h4>
+                <ul class="skills-projects">
+                </ul>
+              </div>
+            </section>
+          </div>
+          <div class="skill">
+            <h3><a href="#" data-skill-heading="other">Other</a></h3>
+            <section class="skill-section" data-skill="other">
+              <p>You can find my experience unrelated to programming and web development under the <a href="#" data-title="education">education section</a></p>
+            </section>
+          </div>
+        </article>
+        <article data-title="bio">
+          <h2>Biography</h2>
+          <h3>Before Programming There was Physics</h3>
+          <img src="http://placehold.it/600x600" alt="First Last Name" title="First Last Name">
+          <p>My background is in physics. I went to college for physics. Got a degree in physics. I went to graduate school for physics. I got my doctorate in physics. I love physics, or so I thought. During my graduate work I slowly came to the realization that it was not physics itself that I deeply enjoyed and was pursuing. What I enjoyed was solving problems, and equally as important, making a difference that I could feel.</p>
+          <p>In college I felt a great sense of accomplishment when I solved a tough problem. This was felt even more so when in graduate school. Graduate school was incredibly tough; 70-100+ hour weeks of learning and solving incredibly complex physics problems that always seemed to require skills beyond my own. It was miserable and rewarding, tiring and worth it. It was the difficulty that made it the work appealing, the teamwork with my cohort that made it better, and the sense of accomplishment that kept coming back for more.</p>
+          <p>After 2&frac12; years of intense graduate physics courses, they were over. Graduate research was underway and a new mode was switched on. This part lasted 3 years and over that time I slowly drifted away from physics. Research was a different animal. Research was slow and steady. Research was wide open, so wide open it was paralyzing at times. Accomplishments didn't arise nearly as often, and they felt nowhere near as rewarding as they did during coursework.</p>
+            <p>Over time I realized that it wasn't physics that was drawing me to the work, it was that sense of accomplishment of a difficult task. It was the satisfaction of knowing that I got it right. I drifted away from physics and searched for another outlet to fill this need.</p>
+          <p>I had only a handful of opportunities to experience programming as a graduate student. The needed arose to learn LabVIEW, a graphical user interface for communicating with scientific equipment processing its data. Self-taught, I interfaced with thermocouples, pneumatic valves, a quartz crystal microbalance, mass flow controllers - tools needed for high vacuum deposition systems. I utilized complex precedural programming to automate the precise control of flow of different compounds to grow this films on the nanometer scale. Now a process that required constant, unblinking attention for anywhere from 2 to 48 hours... was able to run on its own to completion. I loved it.</p>
+          <p>As a teaching assistant I learned VPython and developed physics simulation projects for honors students to develop and explore. I models simple physics principles including conservation of energy and momentum, angular momentum, springs, gravity, pendula, and more. Again, I loved it. I developed my skills at teaching and programming in conjuction.</p>
+          <p>Throughout both my research and teaching experiences, I utilized a high-level mathematical programming language, <i>Mathematica</i>. I used it for everything I could, from automating repetitive homework sets to batch renaming hundreds of research data files. I modeled several physical concepts and constructed several statistical mechanics Monte Carlo simulations with it. <i>Mathematica</i> was my go-to tool to making my life that much easier.</p>
+          <p>These were the experiences through which I discovered my passion for programming. It was that feeling of knowing that my efforts were used to do good. It was that almost primal satisfaction I got from solving a problem and knowing that my efforts were not all for naught. </p>
+          <h3>Then There was Programming</h3>
+          <p>By the time I graduated with a Ph.D. in Physics, I knew I did not want to be a physicist at heart. I looked back on my time spent studying the fundamentals of the universe to find moments that I enjoyed most. I discovered those moments alwayscentered around programming, logic puzzles, and computing in general. These were the tasks I found myself ablt to work endlessly until complete, without awareness of the clock, and I truly enjoyed them. It is unfortunate it took this long to figure it out, but fortunate that it was.</p>
+          <p>After graduation some time complating this tremendous decision to leave physics and ultimately did. I worked for one year as the Director of Tutoring at a rising tutoring company focused teaching the fundamentals and not the solutions through one-on-one interactions tailored to each student's needs.</p>
+          <p>Meanwhile I narrowed strategy to learning web development and choose to enroll in <a href="https://launchschool.com">Launch School</a>. For six months I studied at Launch School during every spare moment I had. It became that this was a passion of mine so I quit my job to study at Launch School full-time. Now almost one year into the program I look back and can safely say that programming is where I belong.</p>
+          <p>Please explore this site and see what I have accomplished in my one year of learning. Think I have potential? I actively looking for a position in web development and would love to hear about opportunities. Please send me an email.</p>
+        </article>
+      </div>
+    </main>
+  </div>
+  <footer>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" data-title="bio">Biography</a>
+        </li>
+        <li>
+          <a href="#" data-title="education">Education</a>
+        </li>
+        <li>
+          <a href="#" data-title="experience">Experience</a>
+        </li>
+        <li>
+          <a href="#" data-title="projects">Projects</a>
+        </li>
+        <li>
+          <a href="#" data-title="contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <p>Navigation icons: <br/>
+      <a href="https://thenounproject.com/term/user/611030">User</a> by AFY Studio from <a href="thenounproject.com">the Noun Project</a>
+      <br>
+      <a href="https://thenounproject.com/term/diploma/704739">Diploma</a> by Danil Polshin from <a href="thenounproject.com">the Noun Project</a>
+      <br>
+      <a href="https://thenounproject.com/term/suitcase/849563">Suitcase</a> by shashank singh from <a href="thenounproject.com">the Noun Project</a>
+      <br>
+      <a href="https://thenounproject.com/term/desktop-web-development/820227">Desktop Web Development</a> by Linseed Studio from <a href="thenounproject.com">the Noun Project</a>
+      <br>
+      <a href="https://thenounproject.com/term/email/999835">Email</a> by Pedro Santos from <a href="thenounproject.com">the Noun Project</a>
+      <br>
+    </p>
+  </footer>
+</body>
+</html>
