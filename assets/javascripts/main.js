@@ -1,61 +1,17 @@
-var cardData = [
-  {
-    "name": "Calculator!",
-    "imgSource": "https://drive.google.com/thumbnail?id=1C7RQY_ASCtqR2qfXdEP786AXZE0OPX2g",
-    "locationLive": "https://codepen.io/ahenegar/full/ypyGax",
-    "locationSource": "https://codepen.io/ahenegar/pen/ypyGax",
-    "locationLiveTitle": "Live Site",
-    "locationSourceTitle": "CodePen Source Code",
-    "skills": [
-      "HTML & CSS",
-      "pure JavaScript"
-    ],
-    "features": [
-      "Stack-like input handles multiple operations at once.",
-      "Programmed from scratch with pure JavaScript.",
-      "Clean design"
-    ],
-  },
-  {
-    "name": "PostIt!",
-    "imgSource": "https://drive.google.com/thumbnail?id=1PvT8fS06oZ6sWG6WNMHP5agkHY8ceBL7",
-    "locationLive": "https://postit-301.herokuapp.com/",
-    "locationSource": "https://github.com/AJDot/301_postit",
-    "locationLiveTitle": "Live Site",
-    "locationSourceTitle": "GitHub Source Code",
-    "skills": [
-      "Ruby on Rails"
-    ],
-    "features": [
-      "Relational Database & MVC",
-      "Partials, Helpers, Filters",
-      "Validations, Authentication (from scratch)",
-      "Forms, AJAX, URL Slugging",
-      "Creating Gems, Building APIs",
-    ],
-  },
-  {
-    "name": "Dictionary",
-    "imgSource": "https://drive.google.com/thumbnail?id=1v26TEQBWzwVGT-nyNSYfPA7UY7q_Gq9O",
-    "locationLive": "https://preview.c9users.io/ajdot/dictionary/index.html?_c9_id=livepreview2&_c9_host=https://ide.c9.io",
-    "locationSource": "https://github.com/AJDot/dictionary",
-    "locationLiveTitle": "Live Site",
-    "locationSourceTitle": "GitHub Source Code",
-    "skills": [
-      "HTML & CSS",
-      "pure JavaScript"
-    ],
-    "features": [
-      "Making/handling AJAX requests",
-      "Working with 3rd APIs",
+function loadJSON(file, callback) {
+  var request = new XMLHttpRequest();
+  var url = "assets/data/cards.json";
+  request.open('GET', url);
+  request.responseType = 'json';
 
-    ],
-  }
-];
+  request.addEventListener('load', function() {
+    callback(request.response);
+  });
+
+  request.send();
+};
 
 $(function() {
-  var $articles = $('.content article');
-
 
   var Experience = {
     $skills: $('.skill'),
@@ -90,9 +46,122 @@ $(function() {
 
   var Projects = {
     $cardBox: $('#cardBox'),
-    templates: {},
+    $cards: null,
+    cardData: [],
+    filters: [],
+    allFilters: [],
 
-    cardData: cardData,
+    setCards: function(response) {
+      this.cardData = response;
+    },
+
+    setAllFilters: function() {
+      this.cardData.forEach(function(card) {
+        card.filters.forEach(function(filter) {
+          if (this.allFilters.indexOf(filter) === -1) {
+            this.allFilters.push(filter);
+          }
+        }.bind(this));
+      }.bind(this));
+    },
+
+    setFilters: function() {
+      var $checkboxes = $("#project-filter :checkbox");
+      var $checked = $checkboxes.filter(":checked");
+      var filters = $checked.map(function() {
+        return $(this).val();
+      }).get();
+      return filters;
+    },
+
+    filter: function(e) {
+      this.filters = this.setFilters();
+
+      if (this.filters.length === 0) {
+        this.$cards.toggle(true);
+      } else {
+        this.$cards.each(this.filterCard.bind(this));
+      }
+    },
+
+    filterCard: function(index, card) {
+      var $card = $(card);
+      var cardData = this.getCardData($card);
+      var keep = this.cardContainsAFilter(cardData, this.filters)
+      $card.toggle(keep);
+    },
+
+    getCardData: function($card) {
+      var id = Number($card.attr('data-id'));
+      return this.cardData.find(function(card) {
+        return card.id === id;
+      });
+    },
+
+    cardContainsAFilter: function(cardData, filters) {
+      return filters.some(function(filter) {
+        return cardData.filters.indexOf(filter) !== -1;
+      });
+    },
+
+    checkboxChange: function(e) {
+      var $checkbox = $(e.currentTarget);
+      var name = $checkbox.attr("data-name");
+      var $input = $('input[name=' + name + ']');
+      var checked = $input.prop("checked");
+
+      $input.prop("checked", !checked);
+      $input.trigger("change");
+    },
+
+    bindEvents: function() {
+      $('#project-filter :checkbox').on('change', this.filter.bind(this));
+      $('#project-filter .checkbox').on('click', this.checkboxChange.bind(this));
+    },
+
+    renderFilters: function() {
+      var filters = [];
+      this.allFilters.forEach(function(filter) {
+        var obj = {};
+        obj.name = filter.replace(/[^a-zA-Z0-9]+/g, '-');
+        obj.name = obj.name.toLowerCase();
+
+        obj.value = filter;
+        obj.text = filter;
+        filters.push(obj);
+      });
+
+      $('#project-filter').html(App.templates.filters_template({ filters: filters }));
+    },
+
+    renderCards: function() {
+      this.$cardBox.html(App.templates.cards_template({ cards: this.cardData }));
+      this.$cards = $('.card-container');
+    },
+
+    fetchAndRenderCards: function() {
+      loadJSON("assets/data/cards.json",  function(response) {
+        this.setCards(response);
+        this.renderCards();
+        this.eventsAfterCardRender();
+      }.bind(this));
+    },
+
+    eventsAfterCardRender: function() {
+      this.setAllFilters();
+      this.renderFilters();
+      this.bindEvents();
+    },
+
+    init: function() {
+      this.fetchAndRenderCards();
+    },
+  }
+
+  var App = {
+    templates: {},
+    $articles: $('.content article'),
+
 
     cacheTemplates: function() {
       var self = this;
@@ -113,34 +182,28 @@ $(function() {
       $('script[type="text/x-handlebars"]').remove();
     },
 
-    renderCards: function() {
-      this.$cardBox.html(this.templates.cards_template({ cards: this.cardData }));
+    getArticleContent: function(e) {
+      e.preventDefault();
+      var $a = $(e.currentTarget);
+      var title = $a.attr('data-title');
+
+      this.$articles.fadeOut(400).filter('[data-title=' + title + ']').delay(400).fadeIn(400);
+
+      this.scrollToTop();
+    },
+
+    scrollToTop: function() {
+      $("html, body").animate({ scrollTop: "0" }, 500);
+    },
+
+    bindEvents: function() {
+      $("a[data-title]").on('click', this.getArticleContent.bind(this));
     },
 
     init: function() {
       this.cacheTemplates();
       this.registerPartials();
       this.removeHandlebarsScripts();
-      this.renderCards();
-
-    },
-  }
-
-  var App = {
-
-    getArticleContent: function(e) {
-      var $a = $(e.currentTarget);
-      var title = $a.attr('data-title');
-
-      $articles.fadeOut(400);
-      $articles.filter('[data-title=' + title + ']').delay(400).fadeIn(400);
-    },
-
-    bindEvents: function() {
-      $("a[data-title]").on('click', this.getArticleContent);
-    },
-
-    init: function() {
       this.bindEvents();
       Experience.init();
       Projects.init();

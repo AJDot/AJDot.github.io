@@ -63,7 +63,6 @@ h3 {
 
 .container > nav {
   float: left;
-  /*width: 150px;*/
   padding: 50px 10px;
   text-align: center;
   box-sizing: border-box;
@@ -133,7 +132,6 @@ main::before {
   bottom: 0;
   left: 150px;
   z-index: -1;
-  /*background: #999999;*/
 }
 
 /**************************************************/
@@ -264,6 +262,63 @@ header {
 /* PROJECTS */
 /**************************************************/
 
+/* Filters */
+
+#project-filter {
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+#project-filter li {
+  display: inline-block;
+  margin: 0 30px 0 0;
+}
+
+#project-filter input {
+  display: none;
+}
+
+#project-filter input + .checkbox {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  background: #444444;
+  border-radius: 100%;
+  transition: all .3s ease;
+}
+
+#project-filter input + .checkbox::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-left: 15px;
+  transform: translateY(-50%) rotate(-90deg);
+  border-width: 30px 10px 0 10px;
+  border-style: solid;
+  border-color: #444444 transparent transparent transparent;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+#project-filter input:checked + .checkbox {
+  background-color: #bad6ba;
+  transform: rotate(90deg);
+}
+
+#project-filter input:checked + .checkbox::after {
+  border-top-color: #bad6ba;
+}
+
+#project-filter label {
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+/* Cards */
+
 .card-container {
   float: left;
   position: relative;
@@ -341,12 +396,6 @@ header {
   text-shadow: 1px 2px 3px black;
 }
 
-.back h4::after {
-  /*
-  content: ":";
-  */
-}
-
 .back ul {
   padding: 0;
   margin: 0 10px 25px;
@@ -360,10 +409,6 @@ header {
 }
 
 .back li::before {
-  /*
-  content: "\00BB";
-  padding-right: 5px;
-  */
 }
 
 .card iframe {
@@ -381,6 +426,18 @@ header {
   height: 100%;
   margin: 0;
   object-fit: cover;
+}
+
+.card img.left {
+  object-position: left;
+}
+
+.card img.top {
+  object-position: top;
+}
+
+.card img.left.top {
+  object-position: left top;
 }
 
 .back .card-link {

@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <title>Portfolio</title>
-  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="assets/stylesheets/main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
@@ -53,11 +52,20 @@
       <div class="content">
         <article data-title="projects">
           <h2>Projects</h2>
-          <ul>
-            <li>Project Cards - darkened background image of project. Text overlay with title and other info.</li>
-            <li>Individual project pages discuss the project, its features, difficulties, etc.</li>
-            <li>Filtering at top for each language.</li>
+          <ul id="project-filter">
+            <script id="filters_template" type="text/x-handlebars">
+              {{#each filters}}
+                <li>
+                  <input type="checkbox" id="{{name}}" name="{{name}}" value="{{value}}">
+                  <div class="checkbox" data-name="{{name}}"></div>
+                  <label for="{{name}}">
+                    {{text}}
+                  </label>
+                </li>
+              {{/each}}
+            </script>
           </ul>
+
           <div id="cardBox">
 
             <script id="cards_template" type="text/x-handlebars">
@@ -67,16 +75,20 @@
             </script>
 
             <script id="card_partial" data-type="partial" type="text/x-handlebars">
-              <div class="card-container">
+              <div class="card-container" data-id="{{id}}">
                 <div class="card">
                   <div class="front">
-                    <img src="{{imgSource}}&sz=w700-h700">
+                    <img {{#if imgClasses}} class="{{imgClasses}}" {{/if}} src="{{imgSource}}&sz=w700-h700">
                     <div class="front-overlay"></div>
                   </div>
                   <div class="back">
                     <h3>{{name}}</h3>
-                    <a href="{{locationLive}}" target="_blank" class="card-link">{{locationLiveTitle}}</a>
-                    <a href="{{locationSource}}" target="_blank" class="card-link">{{locationSourceTitle}}</a>
+                    {{#if live}}
+                      <a href="{{live.location}}" target="_blank" class="card-link">{{live.title}}</a>
+                    {{/if}}
+                    {{#if source}}
+                      <a href="{{source.location}}" target="_blank" class="card-link">{{source.title}}</a>
+                    {{/if}}
                     <h4>Key Skills</h4>
                     <ul>
                       {{#each skills}}
@@ -224,10 +236,10 @@
                 <h4>Example Terminal Projects</h4>
                 <ul class="skills-projects">
                   <li>Rock Paper Scissors Lizard Spock (Procedural and OOP)</li>
-                  <li>Twenty-One</li>
-                  <li>Tic-Tac-Toe</li>
-                  <li>Guess Who</li>
-                  <li>Connect 4</li>
+                  <li>Twenty-One (Procedural and OOP)</li>
+                  <li>Tic-Tac-Toe (Procedural and OOP)</li>
+                  <li>Guess Who (OOP)</li>
+                  <li>Connect 4 (OOP)</li>
                 </ul>
               </div>
               <div class="skill-list">
@@ -318,8 +330,6 @@
                 <h4>Example Snippets</h4>
                 <ul class="skills-projects">
                   <li>Nutrition Facts Label</li>
-                  <li>Mock Company Site (PSD to HTML/CSS) (SpaceDesign)</li>
-                  <li>Shutterbug (PSD to HTML/CSS)</li>
                   <li>Form Layout & Design (From 201 Lesson 6)</li>
                   <li>JS Conf BR 2014 (Clone of http://2014.jsconfbr.org/)</li>
                 </ul>

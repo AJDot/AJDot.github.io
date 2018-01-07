@@ -1,0 +1,231 @@
+[
+  {
+    "id": 1,
+    "name": "Calculator!",
+    "imgSource": "https://drive.google.com/thumbnail?id=1C7RQY_ASCtqR2qfXdEP786AXZE0OPX2g",
+    "live": {
+      "location": "https://codepen.io/ahenegar/full/ypyGax",
+      "title": "CodePen Live Site"
+    },
+    "source": {
+      "location": "https://codepen.io/ahenegar/pen/ypyGax",
+      "title": "CodePen Source Code"
+    },
+    "skills": [
+      "HTML & CSS",
+      "pure JavaScript"
+    ],
+    "features": [
+      "Stack-like input handles multiple operations at once.",
+      "Programmed from scratch with pure JavaScript.",
+      "Clean design"
+    ],
+    "filters": ["HTML & CSS", "JavaScript"]
+  },
+  {
+    "id": 2,
+    "name": "PostIt!",
+    "imgSource": "https://drive.google.com/thumbnail?id=1PvT8fS06oZ6sWG6WNMHP5agkHY8ceBL7",
+    "imgClasses": "left top",
+    "live": {
+      "location": "https://postit-301.herokuapp.com/",
+      "title": "Heroku Live Site"
+    },
+    "source": {
+      "location": "https://github.com/AJDot/301_postit",
+      "title": "GitHub Source Code"
+    },
+    "skills": [
+      "Ruby on Rails"
+    ],
+    "features": [
+      "Relational Database & MVC",
+      "Partials, Helpers, Filters",
+      "Validations, Authentication (from scratch)",
+      "Forms, AJAX, URL Slugging",
+      "Creating Gems, Building APIs"
+    ],
+    "filters": ["Ruby", "Ruby on Rails"]
+  },
+  {
+    "id": 3,
+    "name": "Dictionary",
+    "imgSource": "https://drive.google.com/thumbnail?id=1v26TEQBWzwVGT-nyNSYfPA7UY7q_Gq9O",
+    "live": {
+      "location": "https://preview.c9users.io/ajdot/dictionary/index.html?_c9_id=livepreview2&_c9_host=https://ide.c9.io",
+      "title": "Cloud9 Live Site"
+    },
+    "source": {
+      "location": "https://github.com/AJDot/dictionary",
+      "title": "GitHub Source Code"
+    },
+    "skills": [
+      "HTML & CSS",
+      "pure JavaScript"
+    ],
+    "features": [
+      "Making/handling AJAX requests",
+      "Working with 3rd APIs"
+    ],
+    "filters": ["HTML & CSS", "JavaScript"]
+  },
+  {
+    "id": 4,
+    "name": "Ruby Terminal Games",
+    "imgSource": "https://drive.google.com/thumbnail?id=1CzAyB70OfdUl9ZN3aExH2BVwiYCn2lZR",
+    "imgClasses": "left top",
+    "live": {
+      "location": "https://ide.c9.io/ajdot/ruby_terminal_projects",
+      "title": "Cloud9 Live Site"
+    },
+    "source": {
+      "location": "https://github.com/AJDot/ruby_terminal_projects",
+      "title": "GitHub Source Code"
+    },
+    "skills": [
+      "Ruby"
+    ],
+    "features": [
+      "Procedural Programming",
+      "Object-oriented Programming",
+      "Command line application",
+      "Solid Ruby fundamentals"
+    ],
+    "filters": ["Ruby"]
+  },
+  {
+    "id": 5,
+    "name": "2D Ising Model",
+    "imgSource": "https://drive.google.com/thumbnail?id=1_QJbDdUdn1l3sHZlz_T1HKa9MCug0HC7",
+    "imgClasses": "left top",
+    "live": {
+      "location": "https://preview.c9users.io/ajdot/ising_model/main.html?_c9_id=livepreview0&_c9_host=https://ide.c9.io",
+      "title": "Cloud9 Live Site"
+    },
+    "source": {
+      "location": "https://github.com/AJDot/ising_model",
+      "title": "GitHub Source Code"
+    },
+    "skills": [
+      "JavaScript"
+    ],
+    "features": [
+      "Physics Simulation",
+      "Complex procedural programming",
+      "Utilization of Canvas API"
+    ],
+    "filters": ["JavaScript"]
+  },
+  {
+    "id": 6,
+    "name": "Contact Manager",
+    "imgSource": "https://drive.google.com/thumbnail?id=1zE3hIitYxuwhy-zuiNGTP22xglRI3qcO",
+    "imgClasses": "top",
+    "live": {
+      "location": "https://preview.c9users.io/ajdot/contact_manager/index.html?_c9_id=livepreview0&_c9_host=https://ide.c9.io",
+      "title": "Cloud9 Live Site"
+    },
+    "source": {
+      "location": "https://github.com/AJDot/contact_manager",
+      "title": "GitHub Source Code"
+    },
+    "skills": [
+      "HTML & CSS",
+      "JavaScript"
+    ],
+    "features": [
+      "localStorage",
+      "jQuery",
+      "Asynchronous Filtering",
+      "Tagging"
+    ],
+    "filters": ["HTML & CSS", "JavaScript"]
+  },
+  {
+    "id": 7,
+    "name": "Nutrition Label",
+    "imgSource": "https://drive.google.com/thumbnail?id=1jH4xk_EK8yUlUkwqA_gQJ36f91zC8ana",
+    "imgClasses": "left top",
+    "live": {
+      "location": "https://codepen.io/ahenegar/full/OzxKKN/",
+      "title": "CodePen Live Site"
+    },
+    "source": {
+      "location": "https://codepen.io/ahenegar/pen/OzxKKN/",
+      "title": "CodePen Source Code"
+    },
+    "skills": [
+      "HTML & CSS"
+    ],
+    "features": [
+      "Class-less CSS",
+      "Pixel precision"
+    ],
+    "filters": ["HTML & CSS"]
+  },
+  {
+    "id": 8,
+    "name": "Form Layout",
+    "imgSource": "https://drive.google.com/thumbnail?id=1ins4-5W0zthEC8lHBi3Ip9FE1ye8jiap",
+    "imgClasses": "top",
+    "live": {
+      "location": "https://codepen.io/ahenegar/full/OzOLRb/",
+      "title": "CodePen Live Site"
+    },
+    "source": {
+      "location": "https://codepen.io/ahenegar/pen/OzOLRb/",
+      "title": "CodePen Source Code"
+    },
+    "skills": [
+      "HTML & CSS"
+    ],
+    "features": [
+      "Clean design",
+      "Pixel precision"
+    ],
+    "filters": ["HTML & CSS"]
+  },
+  {
+    "id": 9,
+    "name": "JS Conf 2014 Clone",
+    "imgSource": "https://drive.google.com/thumbnail?id=13DxGn6ZdAIYMm2YPs58lHLHcY_gOa6z1",
+    "imgClasses": "top",
+    "live": {
+      "location": "https://preview.c9users.io/ajdot/jsconf_br_2014_clone/index.html?_c9_id=livepreview0&_c9_host=https://ide.c9.io",
+      "title": "Cloud9 Live Site"
+    },
+    "source": {
+      "location": "https://github.com/AJDot/jsconf_br_2014_clone",
+      "title": "GitHub Source Code"
+    },
+    "skills": [
+      "HTML & CSS"
+    ],
+    "features": [
+      "Clean design",
+      "Pixel precision",
+      "Minimal use of id and class CSS",
+      "Media queries for all display sizes"
+    ],
+    "filters": ["HTML & CSS"]
+  },
+  {
+    "id": 10,
+    "name": "Images Snippets",
+    "imgSource": "https://drive.google.com/thumbnail?id=1L2kCj86FsdGXQIIp7OuYgFJhQ9oqlo91",
+    "imgClasses": "left top",
+    "live": {
+      "location": "https://codepen.io/collection/nYNRvB/",
+      "title": "CodePen Collection"
+    },
+    "skills": [
+      "HTML & CSS",
+      "JavaScript"
+    ],
+    "features": [
+      "Built from scratch",
+      "Clean designs"
+    ],
+    "filters": ["HTML & CSS", "JavaScript"]
+  }
+]
