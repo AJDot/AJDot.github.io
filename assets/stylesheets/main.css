@@ -14,6 +14,10 @@ a {
   text-decoration: none;
 }
 
+a.inline-anchor {
+  font-weight: bold;
+}
+
 small {
   font-style: italic;
 }
@@ -30,7 +34,8 @@ h1 {
 }
 
 h2 {
-  margin: 20px;
+  padding: 20px;
+  margin-bottom: 10px;
   font-size: 24px;
 }
 
@@ -43,13 +48,6 @@ h3 {
   position: relative;
   box-sizing: border-box;
   z-index: 1;
-}
-
-.container:before,
-.container:after {
-  content: "";
-  display: block;
-  clear: both;
 }
 
 /**************************************************/
@@ -146,13 +144,6 @@ header {
   box-sizing: border-box;
 }
 
-.content > article::before,
-.content > article::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 .content article + article {
   display: none;
 }
@@ -169,8 +160,18 @@ header {
 }
 
 /**************************************************/
+/* CONTENT ARTICLE */
+/**************************************************/
+
+.content > article h2 {
+  border-bottom: 1px solid #cccccc;
+}
+
+/**************************************************/
 /* SKILL */
 /**************************************************/
+
+/* Skill Box */
 
 .skill {
   padding: 0;
@@ -214,6 +215,11 @@ header {
   display: block;
 }
 
+.skill.active h3,
+.skill h3 a:hover {
+  background: #cccccc;
+}
+
 .skill h3 a::before {
   display: inline-block;
   content: '\00bb';
@@ -223,34 +229,52 @@ header {
 }
 
 .skill h3 a:hover::before {
-  transform: rotateZ(90deg);
+  transform: rotate(90deg);
 }
+
+/* Skill Section */
 
 .skill-section {
   padding: 10px;
   margin: 0;
 }
 
+.skills li {
+  padding: 3px 10px;
+  border-top: 1px solid transparent;
+}
+
 .skill-list {
   display: inline-block;
-  margin: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
   vertical-align: top;
+  box-sizing: border-box;
 }
 
-.skills li,
-.skills-projects li {
-  margin: 5px 0;
+.skill-list h4 {
+  padding: 5px;
+  text-align: center;
+  background: #cccccc;
 }
 
-.skill-section li:before,
-.skills-projects li:before {
+.skill-list li {
+  display: block;
+}
+
+.skill-list li a {
+  display: block;
+  padding: 10px;
+  border-top: 1px solid #cccccc;
+}
+
+.skill-list li a:before {
   content: "\00BB";
   padding: 0 5px 0 0;
 }
 
-.skill-section h4 {
-  margin: 10px 0;
-  border-bottom: 1px solid #333333;
+.skill-list li a:hover {
+  background: #cccccc;
 }
 
 /**************************************************/
@@ -258,6 +282,14 @@ header {
 /**************************************************/
 
 /* Filters */
+
+.filters {
+  border-bottom: 1px solid #cccccc;
+}
+
+.filters h3 {
+  text-align: center;
+}
 
 #project-filter {
   text-align: center;
@@ -314,6 +346,10 @@ header {
 }
 
 /* Cards */
+
+#cardBox {
+  margin: 20px 0;
+}
 
 .card-container {
   float: left;
@@ -536,4 +572,16 @@ footer ul a:hover {
 footer ul a:hover > i {
   -webkit-filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.6));
   filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.6));
+}
+
+
+/**************************************************/
+/* MISC */
+/**************************************************/
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }

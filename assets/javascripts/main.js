@@ -1,7 +1,6 @@
 function loadJSON(file, callback) {
   var request = new XMLHttpRequest();
-  var url = "assets/data/cards.json";
-  request.open('GET', url);
+  request.open('GET', file);
   request.responseType = 'json';
 
   request.addEventListener('load', function() {
@@ -10,6 +9,11 @@ function loadJSON(file, callback) {
 
   request.send();
 };
+
+function scrollTo(height) {
+  $("html, body").animate({ scrollTop: String(height) }, 500);
+};
+
 
 function generateSlug(string) {
   var result = string;
@@ -20,12 +24,38 @@ function generateSlug(string) {
 
 $(function() {
 
-  var Experience = {
-    $skills: $('.skill'),
+  var Skills = {
+    $skillBox: $('#skillBox'),
+    skillsData: [],
+    $skills: null,
     $skillHeadings: $('[data-skill-heading]'),
     $skillSections: $('[data-skill]'),
     activeClassName: 'active',
 
+    setSkills: function(response) {
+      this.skillsData = response;
+    },
+
+    renderSkills: function() {
+      this.$skillBox.html(App.templates.skills_template({ skills: this.skillsData }));
+      this.$skills = $('.skill');
+      this.$skillHeadings = $('[data-skill-heading]');
+      this.$skillSections = $('[data-skill]');
+    },
+
+    eventsAfterSkillRender: function() {
+      this.bindEvents();
+      this.$skills.first().addClass(this.activeClassName);
+      SkillToProjectLinks.init();
+    },
+
+    fetchAndRenderSkills: function() {
+      loadJSON("assets/data/skills.json",  function(response) {
+        this.setSkills(response);
+        this.renderSkills();
+        this.eventsAfterSkillRender();
+      }.bind(this));
+    },
 
     revealSkill: function(e) {
       e.preventDefault();
@@ -46,8 +76,38 @@ $(function() {
     },
 
     init: function() {
+      this.fetchAndRenderSkills();
+    },
+  };
+
+  var SkillToProjectLinks = {
+    $skillsLinks: null,
+    $projectPageLink: $('nav a[data-title="projects"]'),
+
+    navToProjectCard: function(e) {
+      e.preventDefault();
+      var $a = $(e.currentTarget);
+      var id = $a.attr('data-id');
+      var $card = Projects.$cards.filter('[data-id=' + id + ']');
+      var $otherCards = Projects.$cards.not($card);
+
+      Projects.clearFilters();
+      this.$projectPageLink.eq(0).trigger('click');
+
+      $otherCards.css({ opacity: 0 })
+        .delay(1000)
+        .animate({ opacity: 1 }, 5000);
+
+      setTimeout(Projects.scrollToCard.bind(Projects, $card), 1100);
+    },
+
+    bindEvents: function() {
+      $('.projects a').on('click', this.navToProjectCard.bind(this));
+    },
+
+    init: function() {
+      // this.setSkillsLinks();
       this.bindEvents();
-      this.$skills.first().addClass(this.activeClassName);
     },
   };
 
@@ -73,8 +133,7 @@ $(function() {
     },
 
     setFilters: function() {
-      var $checkboxes = $("#project-filter :checkbox");
-      var $checked = $checkboxes.filter(":checked");
+      var $checked = this.$checkboxes.filter(":checked");
       var filters = $checked.map(function() {
         return $(this).val();
       }).get();
@@ -93,13 +152,17 @@ $(function() {
 
     filterCard: function(index, card) {
       var $card = $(card);
-      var cardData = this.getCardData($card);
+      var id = Number($card.attr('data-id'));
+      var cardData = this.getCardData(id);
       var keep = this.cardContainsAFilter(cardData, this.filters)
       $card.toggle(keep);
     },
 
-    getCardData: function($card) {
-      var id = Number($card.attr('data-id'));
+    clearFilters: function() {
+      this.$checkboxes.prop("checked", false).eq(0).trigger('change');
+    },
+
+    getCardData: function(id) {
       return this.cardData.find(function(card) {
         return card.id === id;
       });
@@ -121,6 +184,10 @@ $(function() {
       $input.trigger("change");
     },
 
+    scrollToCard: function($card) {
+      scrollTo($card.offset().top - 50);
+    },
+
     bindEvents: function() {
       $('#project-filter :checkbox').on('change', this.filter.bind(this));
       $('#project-filter .checkbox').on('click', this.checkboxChange.bind(this));
@@ -137,6 +204,7 @@ $(function() {
       });
 
       $('#project-filter').html(App.templates.filters_template({ filters: filters }));
+      this.$checkboxes = $("#project-filter :checkbox");
     },
 
     renderCards: function() {
@@ -167,7 +235,6 @@ $(function() {
     templates: {},
     $articles: $('.content article'),
 
-
     cacheTemplates: function() {
       var self = this;
       $('script[type="text/x-handlebars"]').each(function() {
@@ -194,15 +261,11 @@ $(function() {
 
       this.$articles.fadeOut(400).filter('[data-title=' + title + ']').delay(400).fadeIn(400);
 
-      this.scrollToTop();
-    },
-
-    scrollToTop: function() {
-      $("html, body").animate({ scrollTop: "0" }, 500);
+      scrollTo(0);
     },
 
     bindEvents: function() {
-      $("a[data-title]").on('click', this.getArticleContent.bind(this));
+      $("body").on('click', "a[data-title]", this.getArticleContent.bind(this));
     },
 
     init: function() {
@@ -210,7 +273,7 @@ $(function() {
       this.registerPartials();
       this.removeHandlebarsScripts();
       this.bindEvents();
-      Experience.init();
+      Skills.init();
       Projects.init();
     },
   };

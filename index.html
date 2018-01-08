@@ -11,7 +11,7 @@
   <script src="assets/javascripts/main.js"></script>
 </head>
 <body>
-  <div class="container">
+  <div class="container clearfix">
     <nav>
       <ul>
         <li>Use Launch School as Reference???</li>
@@ -52,23 +52,230 @@
         <h1>First Last Name</h1>
       </header>
       <div class="content">
-        <article data-title="projects">
-          <h2>Projects</h2>
-          <ul id="project-filter">
-            <script id="filters_template" type="text/x-handlebars">
-              {{#each filters}}
-                <li>
-                  <input type="checkbox" id="{{name}}" name="{{name}}" value="{{value}}">
-                  <div class="checkbox" data-name="{{name}}"></div>
-                  <label for="{{name}}">
-                    {{text}}
-                  </label>
-                </li>
+        <article class="clearfix" data-title="skills">
+          <h2>Skills</h2>
+          <div id="skillBox">
+
+            <script id="skills_template" type="text/x-handlebars">
+              {{#each skills}}
+                {{> skill_template}}
               {{/each}}
             </script>
-          </ul>
 
-          <div id="cardBox">
+            <script id="skill_template" data-type="partial" type="text/x-handlebars">
+              <div class="skill">
+                <h3><a href="#" data-skill-heading="{{skill}}">{{heading}}</a></h3>
+                <section class="skill-section" data-skill="{{skill}}">
+                  {{#if other}}
+                    <p>{{{otherText}}}</p>
+                  {{else}}
+                    <div class="skill-list skills">
+                      {{#if skill-list-title}}
+                        <h4>{{{skill-list-title}}}</h4>
+                      {{/if}}
+                      <ul>
+                        {{#each skills}}
+                          <li>{{this}}</li>
+                        {{/each}}
+                      </ul>
+                    </div>
+                    <div class="skill-list projects">
+                      {{#if projects}}
+                        <h4>Example Applications</h4>
+                        <ul>
+                          {{#each projects}}
+                            <li><a href="#" data-id="{{id}}">{{name}}</a></li>
+                          {{/each}}
+                        </ul>
+                      {{/if}}
+                    </div>
+                  {{/if}}
+                </section>
+              </div>
+            </script>
+          </div>
+
+          <!-- <div class="skill">
+            <h3><a href="#" data-skill-heading="ruby">Ruby</a></h3>
+            <section class="skill-section" data-skill="ruby">
+              <div class="skill-list">
+                <h4>1 year of study through <a href="https://www.launchschool.com">Launch School</a></h4>
+                <ul class="skills">
+                  <li>Core knowledge: syntax, logic, etc.</li>
+                  <li>Procedural Programming and OOP, Inheritance</li>
+                  <li>Instance/Class Variables, blocks/procs/lambdas</li>
+                  <li>Regular Expressions</li>
+                  <li>Minitest</li>
+                  <li>Sinatra</li>
+                  <li>ERB</li>
+                  <li>Ruby on Rails</li>
+                </ul>
+              </div>
+              <div class="projects">
+                <h4>Example Applications</h4>
+                <ul>
+                  <li><a href="#" data-id="">Photography Site</a></li>
+                  <li><a href="#" data-id="2">PostIt!</a></li>
+                  <li><a href="#" data-id="">Recipe Manager</a></li>
+                  <li><a href="#" data-id="4">Ruby Terminal Games</a></li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <div class="skill">
+            <h3><a href="#" data-skill-heading="ror">Ruby on Rails</a></h3>
+            <section class="skill-section" data-skill="ror">
+              <div class="skill-list">
+                <h4>1 month of study through <a href="https://www.launchschool.com">Launch School</a></h4>
+                <ul class="skills">
+                  <li>Core knowledge: syntax, logic, etc.</li>
+                  <li>Active Record and database associations</li>
+                  <li>REST</li>
+                  <li>AJAX</li>
+                  <li>partials, helpers, filters, form, validations, callbacks, roles</li>
+                </ul>
+              </div>
+              <div class="projects">
+                <h4>Example Projects</h4>
+                <ul>
+                  <li><a href="#" data-id="2">PostIt!</a></li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <div class="skill">
+            <h3><a href="#" data-skill-heading="js">JavaScript</a></h3>
+            <section class="skill-section" data-skill="js">
+              <div class="skill-list">
+                <h4>6 months of study through <a href="https://www.launchschool.com">Launch School</a></h4>
+                <ul class="skills">
+                  <li>Core knowledge: syntax, logic, etc.</li>
+                  <li>Primitives & Objects</li>
+                  <li>Mutataions</li>
+                  <li>Variable Scope, Function Scope & Closures</li>
+                  <li>Closures & Private Data</li>
+                  <li>Functional Abstractions & Declarative Programming</li>
+                  <li>Higher Order Functions</li>
+                  <li>Event-Driven and Asynchronous Programming</li>
+                  <li>Pseudo-classical & OLOO object creation patterns</li>
+                  <li>Working with RESTful APIs</li>
+                  <li>AJAX</li>
+                  <li>jQuery</li>
+                  <li>Handlebars</li>
+                </ul>
+              </div>
+              <div class="skill-list">
+                <h4>Example Projects</h4>
+                <ul class="projects">
+                  <li><a href="#" data-id="">Photography Site</a></li>
+                  <li><a href="#" data-id="1">Calculator</a></li>
+                  <li><a href="#" data-id="3">Dictionary</a></li>
+                  <li><a href="#" data-id="">Todo Lists</a></li>
+                  <li><a href="#" data-id="6">Contact Manager</a></li>
+                  <li><a href="#" data-id="5">Ising Model</a></li>
+                  <li><a href="#" data-id="10">Image Snippets</a></li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <div class="skill">
+            <h3><a href="#" data-skill-heading="htmlcss">HTML/CSS</a></h3>
+            <section class="skill-section" data-skill="htmlcss">
+              <div class="skill-list">
+                <h4>6 months of study through <a href="https://www.launchschool.com">Launch School</a></h4>
+                <ul class="skills">
+                  <li>Core knowledge: syntax, logic, etc.</li>
+                  <li>Block model</li>
+                  <li>Semantics</li>
+                  <li>Convert photoshop design files to HTML/CSS</li>
+                </ul>
+              </div>
+              <div class="skill-list">
+                <h4>Example Projects</h4>
+                <ul class="projects">
+                  <li><a href="#" data-id="">Photography Site</a></li>
+                  <li><a href="#" data-id="">Todos List</a></li>
+                </ul>
+              </div>
+              <div class="skill-list">
+                <h4>Example Snippets</h4>
+                <ul class="projects">
+                  <li><a href="#" data-id="7">Nutrition Facts Label</a></li>
+                  <li><a href="#" data-id="8">Form Layout & Design (From 201 Lesson 6)</a></li>
+                  <li><a href="#" data-id="9">JS Conf BR 2014 (Clone of http://2014.jsconfbr.org/)</a></li>
+                  <li><a href="#" data-id="10">Image Snippets</a></li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <div class="skill">
+            <h3><a href="#" data-skill-heading="sql">SQL</a></h3>
+            <section class="skill-section" data-skill="sql">
+              <div class="skill-list">
+                <h4>2 months of study through <a href="https://www.launchschool.com">Launch School</a></h4>
+                <ul class="skills">
+                  <li>Core knowledge: syntax, logic, etc.</li>
+                  <li>PostgreSQL (and PG gem)</li>
+                  <li>Conceptual & Physical Schema</li>
+                  <li>Sublanguages: DDL, DCL, DML</li>
+                  <li>Construct relations, keys, constraints, sequences, defaults</li>
+                  <li>JOINs (inner, left outer, right outer)</li>
+                  <li>Create database-back web applications</li>
+                </ul>
+              </div>
+              <div class="skill-list">
+                <h4>Example Projects</h4>
+                <ul class="projects">
+                  <li><a href="#" data-id="">Recipe Manager</a></li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <div class="skill">
+            <h3><a href="#" data-skill-heading="http">HTTP</a></h3>
+            <section class="skill-section" data-skill="http">
+              <div class="skill-list">
+                <ul class="skills">
+                  <li>Making requests / processing responses manually</li>
+                  <li>Request/Response Cycle</li>
+                  <li>Stateful Application</li>
+                  <li>Sessions, cookies, AJAX</li>
+                </ul>
+              </div>
+              <div class="skill-list">
+                <h4>Example Web Applications</h4>
+                <ul class="projects">
+                </ul>
+              </div>
+            </section>
+          </div>
+          <div class="skill">
+            <h3><a href="#" data-skill-heading="other">Other</a></h3>
+            <section class="skill-section" data-skill="other">
+              <p>You can find my experience unrelated to programming and web development under the <a href="#" data-title="education">education section</a></p>
+            </section>
+          </div> -->
+        </article>
+        <article class="clearfix" data-title="projects">
+          <h2>Projects</h2>
+          <section class="filters">
+            <h3>Filters</h3>
+            <ul id="project-filter">
+              <script id="filters_template" type="text/x-handlebars">
+                {{#each filters}}
+                  <li>
+                    <input type="checkbox" id="{{name}}" name="{{name}}" value="{{value}}">
+                    <div class="checkbox" data-name="{{name}}"></div>
+                    <label for="{{name}}">
+                      {{text}}
+                    </label>
+                  </li>
+                {{/each}}
+              </script>
+            </ul>
+          </section>
+
+          <div id="cardBox" class="clearfix">
 
             <script id="cards_template" type="text/x-handlebars">
               {{#each cards}}
@@ -118,11 +325,11 @@
 
           </div>
         </article>
-        <article data-title="contact">
+        <article class="clearfix" data-title="contact">
           <h3>Like what you've seen? Think I may enjoy contributing at your company?</h3>
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeZNJzImDdn9jEYgpRvElGXnyIb5K5mXLAmDSz1ipDTcVaDtQ/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </article>
-        <article data-title="education">
+        <article class="clearfix" data-title="education">
           <h2>Education</h2>
           <div class="school">
             <h3>University of Maryland, Baltimore County (UMBC) <small>Baltimore, Maryland</small></h3>
@@ -216,177 +423,7 @@
             </section>
           </div>
         </article>
-        <article data-title="skills">
-          <h2>Skills</h2>
-          <div class="skill">
-            <h3><a href="#" data-skill-heading="ruby">Ruby</a></h3>
-            <section class="skill-section" data-skill="ruby">
-              <div class="skill-list">
-                <h4>1 year of study through <a href="https://www.launchschool.com">Launch School</a></h4>
-                <ul class="skills">
-                  <li>Core knowledge: syntax, logic, etc.</li>
-                  <li>Procedural Programming and OOP, Inheritance</li>
-                  <li>Instance/Class Variables, blocks/procs/lambdas</li>
-                  <li>Regular Expressions</li>
-                  <li>Minitest</li>
-                  <li>Sinatra</li>
-                  <li>ERB</li>
-                  <li>Ruby on Rails</li>
-                </ul>
-              </div>
-              <div class="skill-list">
-                <h4>Example Terminal Projects</h4>
-                <ul class="skills-projects">
-                  <li>Rock Paper Scissors Lizard Spock (Procedural and OOP)</li>
-                  <li>Twenty-One (Procedural and OOP)</li>
-                  <li>Tic-Tac-Toe (Procedural and OOP)</li>
-                  <li>Guess Who (OOP)</li>
-                  <li>Connect 4 (OOP)</li>
-                </ul>
-              </div>
-              <div class="skill-list">
-                <h4>Example Web Applications</h4>
-                <ul class="skills-projects">
-                  <li>Photography Site</li>
-                  <li>PostIt!</li>
-                  <li>Recipe Manager</li>
-                </ul>
-              </div>
-            </section>
-          </div>
-          <div class="skill">
-            <h3><a href="#" data-skill-heading="ror">Ruby on Rails</a></h3>
-            <section class="skill-section" data-skill="ror">
-              <div class="skill-list">
-                <h4>1 month of study through <a href="https://www.launchschool.com">Launch School</a></h4>
-                <ul class="skills">
-                  <li>Core knowledge: syntax, logic, etc.</li>
-                  <li>Active Record and database associations</li>
-                  <li>REST</li>
-                  <li>AJAX</li>
-                  <li>partials, helpers, filters, form, validations, callbacks, roles</li>
-                </ul>
-              </div>
-              <div class="skill-list">
-                <h4>Example Projects</h4>
-                <ul class="skills-projects">
-                  <li>PostIt!</li>
-                </ul>
-              </div>
-            </section>
-          </div>
-          <div class="skill">
-            <h3><a href="#" data-skill-heading="js">JavaScript</a></h3>
-            <section class="skill-section" data-skill="js">
-              <div class="skill-list">
-                <h4>6 months of study through <a href="https://www.launchschool.com">Launch School</a></h4>
-                <ul class="skills">
-                  <li>Core knowledge: syntax, logic, etc.</li>
-                  <li>Primitives & Objects</li>
-                  <li>Mutataions</li>
-                  <li>Variable Scope, Function Scope & Closures</li>
-                  <li>Closures & Private Data</li>
-                  <li>Functional Abstractions & Declarative Programming</li>
-                  <li>Higher Order Functions</li>
-                  <li>Event-Driven and Asynchronous Programming</li>
-                  <li>Pseudo-classical & OLOO object creation patterns</li>
-                  <li>Working with RESTful APIs</li>
-                  <li>AJAX</li>
-                  <li>jQuery</li>
-                  <li>Handlebars</li>
-                </ul>
-              </div>
-              <div class="skill-list">
-                <h4>Example Projects</h4>
-                <ul class="skills-projects">
-                  <li>Photography Site</li>
-                  <li>Calculator</li>
-                  <li>Dictionary</li>
-                  <li>Todo Lists</li>
-                  <li>Contact Manager</li>
-                  <li>Ising Model</li>
-                </ul>
-              </div>
-            </section>
-          </div>
-          <div class="skill">
-            <h3><a href="#" data-skill-heading="htmlcss">HTML/CSS</a></h3>
-            <section class="skill-section" data-skill="htmlcss">
-              <div class="skill-list">
-                <h4>6 months of study through <a href="https://www.launchschool.com">Launch School</a></h4>
-                <ul class="skills">
-                  <li>Core knowledge: syntax, logic, etc.</li>
-                  <li>Block model</li>
-                  <li>Semantics</li>
-                  <li>Convert photoshop design files to HTML/CSS</li>
-                </ul>
-              </div>
-              <div class="skill-list">
-                <h4>Example Projects</h4>
-                <ul class="skills-projects">
-                  <li>Photography Site</li>
-                  <li>Todos List</li>
-                </ul>
-              </div>
-              <div class="skill-list">
-                <h4>Example Snippets</h4>
-                <ul class="skills-projects">
-                  <li>Nutrition Facts Label</li>
-                  <li>Form Layout & Design (From 201 Lesson 6)</li>
-                  <li>JS Conf BR 2014 (Clone of http://2014.jsconfbr.org/)</li>
-                </ul>
-              </div>
-            </section>
-          </div>
-          <div class="skill">
-            <h3><a href="#" data-skill-heading="sql">SQL</a></h3>
-            <section class="skill-section" data-skill="sql">
-              <div class="skill-list">
-                <h4>2 months of study through <a href="https://www.launchschool.com">Launch School</a></h4>
-                <ul class="skills">
-                  <li>Core knowledge: syntax, logic, etc.</li>
-                  <li>PostgreSQL (and PG gem)</li>
-                  <li>Conceptual & Physical Schema</li>
-                  <li>Sublanguages: DDL, DCL, DML</li>
-                  <li>Construct relations, keys, constraints, sequences, defaults</li>
-                  <li>JOINs (inner, left outer, right outer)</li>
-                  <li>Create database-back web applications</li>
-                </ul>
-              </div>
-              <div class="skill-list">
-                <h4>Example Projects</h4>
-                <ul class="skills-projects">
-                  <li>Recipe Manager</li>
-                </ul>
-              </div>
-            </section>
-          </div>
-          <div class="skill">
-            <h3><a href="#" data-skill-heading="http">HTTP</a></h3>
-            <section class="skill-section" data-skill="http">
-              <div class="skill-list">
-                <ul class="skills">
-                  <li>Making requests / processing responses manually</li>
-                  <li>Request/Response Cycle</li>
-                  <li>Stateful Application</li>
-                  <li>Sessions, cookies, AJAX</li>
-                </ul>
-              </div>
-              <div class="skill-list">
-                <h4>Example Web Applications</h4>
-                <ul class="skills-projects">
-                </ul>
-              </div>
-            </section>
-          </div>
-          <div class="skill">
-            <h3><a href="#" data-skill-heading="other">Other</a></h3>
-            <section class="skill-section" data-skill="other">
-              <p>You can find my experience unrelated to programming and web development under the <a href="#" data-title="education">education section</a></p>
-            </section>
-          </div>
-        </article>
-        <article data-title="bio">
+        <article class="clearfix" data-title="bio">
           <h2>Biography</h2>
           <h3>Before Programming There was Physics</h3>
           <img src="http://placehold.it/600x600" alt="First Last Name" title="First Last Name">

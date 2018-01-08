@@ -1,0 +1,120 @@
+[
+  {
+    "skill": "ruby",
+    "heading": "Ruby",
+    "skill-list-title": "1 year of study through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
+    "skills": [
+      "Core knowledge: syntax, logic, etc.",
+      "Procedural Programming and OOP, Inheritance",
+      "Instance/Class Variables, blocks/procs/lambdas",
+      "Regular Expressions",
+      "Minitest",
+      "Sinatra",
+      "ERB",
+      "Ruby on Rails"
+    ],
+    "projects": [
+      { "id": "", "name": "Photography Site" },
+      { "id": "2", "name": "PostIt!" },
+      { "id": "", "name": "Recipe Manager" },
+      { "id": "4", "name": "Ruby Terminal Games" }
+    ]
+  },
+  {
+    "skill": "ror",
+    "heading": "Ruby on Rails",
+    "skill-list-title": "1 month of study through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
+    "skills": [
+      "Core knowledge: syntax, logic, etc.",
+      "Active Record and database associations",
+      "REST",
+      "AJAX",
+      "partials, helpers, filters, form, validations, callbacks, roles"
+    ],
+    "projects": [
+      { "id": "2", "name": "PostIt!" }
+    ]
+  },
+  {
+    "skill": "js",
+    "heading": "JavaScript",
+    "skill-list-title": "6 months of study through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
+    "skills": [
+      "Core knowledge: syntax, logic, etc.",
+      "Primitives & Objects",
+      "Mutations",
+      "Variable Scope, Function Scope & Closures",
+      "Closures & Private Data",
+      "Functional Abstractions & Declarative Programming",
+      "Higher Order Functions",
+      "Event-Driven and Asynchronous Programming",
+      "Pseudo-classical & OLOO object creation patterns",
+      "Working with RESTful APIs",
+      "AJAX",
+      "jQuery",
+      "Handlebars"
+    ],
+    "projects": [
+      { "id": "", "name": "Photography Site" },
+      { "id": "1", "name": "Calculator" },
+      { "id": "3", "name": "Dictionary" },
+      { "id": "", "name": "To-Do Lists" },
+      { "id": "6", "name": "Contact Manager" },
+      { "id": "5", "name": "2D Ising Model" },
+      { "id": "10", "name": "Image Snippets" }
+    ]
+  },
+  {
+    "skill": "htmlcss",
+    "heading": "HTML & CSS",
+    "skill-list-title": "6 months of study through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
+    "skills": [
+      "Core knowledge: syntax, logic, etc.",
+      "Block model",
+      "Semantics",
+      "Convert photoshop design files to HTML/CSS"
+    ],
+    "projects": [
+      { "id": "", "name": "Photography Site" },
+      { "id": "", "name": "To-Do Lists" },
+      { "id": "7", "name": "Nurition Facts Label" },
+      { "id": "8", "name": "Form Layout" },
+      { "id": "9", "name": "JS Conf BR 2014 Clone" },
+      { "id": "10", "name": "Image Snippets" }
+    ]
+  },
+  {
+    "skill": "sql",
+    "heading": "SQL",
+    "skill-list-title": "2 months of study through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
+    "skills": [
+      "Core knowledge: syntax, logic, etc.",
+      "PostgreSQL (and PG gem)",
+      "Conceptual & Physical Schema",
+      "Sublanguages: DDL, DCL, DML",
+      "Construct relations, keys, constraints, sequences, defaults",
+      "JOINs (inner, left outer, right outer)",
+      "Create database-back web applications"
+    ],
+    "projects": [
+      { "id": "", "name": "Recipe Manager" }
+    ]
+  },
+  {
+    "skill": "http",
+    "heading": "HTTP",
+    "skill-list-title": "",
+    "skills": [
+      "Making requests / processing responses manually",
+      "Request/Response Cycle",
+      "Stateful Application",
+      "Sessions, cookies, AJAX"
+    ]
+  },
+  {
+    "skill": "other",
+    "heading": "Other",
+    "other": true,
+    "otherText": "You can find my experience unrelated to programming and web development under the <a href='#' class='inline-anchor' data-title='education'>education section</a>."
+  }
+]
