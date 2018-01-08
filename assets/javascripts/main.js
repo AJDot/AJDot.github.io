@@ -234,6 +234,7 @@ $(function() {
   var App = {
     templates: {},
     $articles: $('.content article'),
+    activeClassName: 'active',
 
     cacheTemplates: function() {
       var self = this;
@@ -262,6 +263,11 @@ $(function() {
       this.$articles.fadeOut(400).filter('[data-title=' + title + ']').delay(400).fadeIn(400);
 
       scrollTo(0);
+      this.activateNavItem(title);
+    },
+
+    activateNavItem: function(title) {
+      $('nav a').removeClass(this.activeClassName).filter('[data-title=' + title + ']').addClass(this.activeClassName);
     },
 
     bindEvents: function() {

@@ -60,7 +60,9 @@
       { "id": "3", "name": "Dictionary" },
       { "id": "", "name": "To-Do Lists" },
       { "id": "6", "name": "Contact Manager" },
-      { "id": "5", "name": "2D Ising Model" },
+      { "id": "5", "name": "2D Ising Model" }
+    ],
+    "snippets": [
       { "id": "10", "name": "Image Snippets" }
     ]
   },
@@ -77,11 +79,14 @@
     "projects": [
       { "id": "", "name": "Photography Site" },
       { "id": "", "name": "To-Do Lists" },
+      { "id": "9", "name": "JS Conf BR 2014 Clone" }
+    ],
+    "snippets": [
       { "id": "7", "name": "Nurition Facts Label" },
       { "id": "8", "name": "Form Layout" },
-      { "id": "9", "name": "JS Conf BR 2014 Clone" },
       { "id": "10", "name": "Image Snippets" }
     ]
+
   },
   {
     "skill": "sql",

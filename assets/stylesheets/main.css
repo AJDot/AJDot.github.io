@@ -96,13 +96,20 @@ h3 {
   margin: 10px auto;
   font-size: 72px;
   text-indent: 0;
-  transition: filter .2s ease;
+  transition: filter .1s linear;
 }
 
-.container > nav a:hover > i {
+.container > nav a:hover > i,
+.container > nav a.active > i {
   text-indent: 0;
   -webkit-filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.6));
   filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.6));
+}
+
+.container > nav a:active > i {
+  text-indent: 0;
+  -webkit-filter: none;
+          filter: none;
 }
 
 /**************************************************/
@@ -132,7 +139,7 @@ main::before {
 /**************************************************/
 
 header {
-  background: #995555;
+  border-bottom: 1px solid #cccccc;
 }
 
 /**************************************************/
@@ -168,6 +175,19 @@ header {
 }
 
 /**************************************************/
+/* BIO */
+/**************************************************/
+
+.bio section + section {
+  margin-top: 20px;
+  border-top: 1px solid #cccccc;
+}
+
+.bio p {
+  text-align: justify;
+}
+
+/**************************************************/
 /* SKILL */
 /**************************************************/
 
@@ -176,23 +196,28 @@ header {
 .skill {
   padding: 0;
   margin: 0 15px;
-  border-left: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
+  /*border-left: 1px solid #cccccc;*/
+  /*border-right: 1px solid #cccccc;*/
+  border-left: 1px solid #333333;
+  border-right: 1px solid #333333;
   transition: all .3s ease;
 }
 
 .skill:first-of-type {
-  border-top: 1px solid #cccccc;
+  /*border-top: 1px solid #cccccc;*/
+  border-top: 1px solid #333333;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
 
 .skill + .skill {
-  border-top: 1px solid #cccccc;
+  /*border-top: 1px solid #cccccc;*/
+  border-top: 1px solid #333333;
 }
 
 .skill:last-of-type {
-  border-bottom: 1px solid #cccccc;
+  /*border-bottom: 1px solid #cccccc;*/
+  border-bottom: 1px solid #333333;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
@@ -203,7 +228,8 @@ header {
 
 .skill.active {
   margin: 0 0 5px 0;
-  border-bottom: 1px solid #cccccc;
+  /*border-bottom: 1px solid #cccccc;*/
+  border-bottom: 1px solid #333333;
   box-shadow: 0 0 16px rgba(0,0,0,0.4);
 }
 
@@ -217,7 +243,9 @@ header {
 
 .skill.active h3,
 .skill h3 a:hover {
-  background: #cccccc;
+  /*background: #cccccc;*/
+  color: #ffffff;
+  background: #333333;
 }
 
 .skill h3 a::before {
@@ -246,7 +274,8 @@ header {
 
 .skill-list {
   display: inline-block;
-  border: 1px solid #cccccc;
+  margin-bottom: 4px;
+  border: 1px solid #333333;
   border-radius: 4px;
   vertical-align: top;
   box-sizing: border-box;
@@ -255,7 +284,9 @@ header {
 .skill-list h4 {
   padding: 5px;
   text-align: center;
-  background: #cccccc;
+  color: #ffffff;
+  background: #333333;
+  border: 1px solid #333333;
 }
 
 .skill-list li {
@@ -274,7 +305,10 @@ header {
 }
 
 .skill-list li a:hover {
-  background: #cccccc;
+  /*background: #cccccc;*/
+  color: #ffffff;
+  background: #333333;
+  border-color: #333333;
 }
 
 /**************************************************/
@@ -549,7 +583,7 @@ footer {
   padding: 30px;
   text-align: center;
   color: #ffffff;
-  background: #555599;
+  background: #333333;
 }
 
 footer ul li {
@@ -561,7 +595,7 @@ footer ul li {
 footer ul a {
   display: inline-block;
   padding: 5px;
-  transition: transform .3s ease;
+  transition: transform .2s ease;
   box-sizing: border-box;
 }
 
@@ -569,11 +603,14 @@ footer ul a:hover {
   transform: translateY(-5px);
 }
 
-footer ul a:hover > i {
-  -webkit-filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.6));
-  filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.6));
+footer ul a > i {
+  transition: filter .1s linear;
 }
 
+footer ul a:hover > i {
+  -webkit-filter: drop-shadow(2px 1px 2px rgba(255, 255, 255, 0.6));
+  filter: drop-shadow(2px 1px 2px rgba(255, 255, 255, 0.6));
+}
 
 /**************************************************/
 /* MISC */
