@@ -11,6 +11,13 @@ function loadJSON(file, callback) {
   request.send();
 };
 
+function generateSlug(string) {
+  var result = string;
+  result = result.replace(/[^a-zA-Z0-9]+/g, '-');
+  result = result.toLowerCase();
+  return result;
+};
+
 $(function() {
 
   var Experience = {
@@ -40,7 +47,7 @@ $(function() {
 
     init: function() {
       this.bindEvents();
-      this.$skills.first().addClass(this.activeClassName)
+      this.$skills.first().addClass(this.activeClassName);
     },
   };
 
@@ -122,13 +129,11 @@ $(function() {
     renderFilters: function() {
       var filters = [];
       this.allFilters.forEach(function(filter) {
-        var obj = {};
-        obj.name = filter.replace(/[^a-zA-Z0-9]+/g, '-');
-        obj.name = obj.name.toLowerCase();
-
-        obj.value = filter;
-        obj.text = filter;
-        filters.push(obj);
+        filters.push({
+          name: generateSlug(filter),
+          value: filter,
+          text: filter,
+        });
       });
 
       $('#project-filter').html(App.templates.filters_template({ filters: filters }));

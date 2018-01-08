@@ -93,23 +93,18 @@ h3 {
   text-indent: 15px;
 }
 
-.container > nav a:hover .material-icons {
-  text-indent: 0;
-}
-
-.container > nav a img {
+.container > nav a > i {
   display: block;
-  width: 100px;
-  height: 100px;
-  margin: 5px auto;
-  object-fit: cover;
-  object-position: top;
+  margin: 10px auto;
+  font-size: 72px;
+  text-indent: 0;
   transition: filter .2s ease;
 }
 
-.container > nav a:hover img {
-  -webkit-filter: drop-shadow(2px 1px 2px rgba(0,0,0,0.4));
-  filter: drop-shadow(2px 1px 2px rgba(0,0,0,0.4));
+.container > nav a:hover > i {
+  text-indent: 0;
+  -webkit-filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.6));
 }
 
 /**************************************************/
@@ -315,6 +310,7 @@ header {
 #project-filter label {
   vertical-align: middle;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 /* Cards */
@@ -520,25 +516,24 @@ footer {
   background: #555599;
 }
 
-footer nav li {
+footer ul li {
   display: inline-block;
-  font-size: 20px;
+  margin: 0 20px;
+  font-size: 36px;
 }
 
-footer nav li + li::before {
-  content: " | ";
-  display: inline-block;
-  padding: 5px;
-  box-sizing: border-box;
-}
-
-footer nav a {
+footer ul a {
   display: inline-block;
   padding: 5px;
   transition: transform .3s ease;
   box-sizing: border-box;
 }
 
-footer nav a:hover {
+footer ul a:hover {
   transform: translateY(-5px);
+}
+
+footer ul a:hover > i {
+  -webkit-filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.6));
 }
