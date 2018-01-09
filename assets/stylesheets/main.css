@@ -196,27 +196,22 @@ header {
 .skill {
   padding: 0;
   margin: 0 15px;
-  /*border-left: 1px solid #cccccc;*/
-  /*border-right: 1px solid #cccccc;*/
   border-left: 1px solid #333333;
   border-right: 1px solid #333333;
   transition: all .3s ease;
 }
 
 .skill:first-of-type {
-  /*border-top: 1px solid #cccccc;*/
   border-top: 1px solid #333333;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
 
 .skill + .skill {
-  /*border-top: 1px solid #cccccc;*/
   border-top: 1px solid #333333;
 }
 
 .skill:last-of-type {
-  /*border-bottom: 1px solid #cccccc;*/
   border-bottom: 1px solid #333333;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -228,7 +223,6 @@ header {
 
 .skill.active {
   margin: 0 0 5px 0;
-  /*border-bottom: 1px solid #cccccc;*/
   border-bottom: 1px solid #333333;
   box-shadow: 0 0 16px rgba(0,0,0,0.4);
 }
@@ -243,7 +237,6 @@ header {
 
 .skill.active h3,
 .skill h3 a:hover {
-  /*background: #cccccc;*/
   color: #ffffff;
   background: #333333;
 }
@@ -305,7 +298,6 @@ header {
 }
 
 .skill-list li a:hover {
-  /*background: #cccccc;*/
   color: #ffffff;
   background: #333333;
   border-color: #333333;
@@ -314,6 +306,11 @@ header {
 /**************************************************/
 /* PROJECTS */
 /**************************************************/
+
+.projects h3 {
+  margin: 20px 0;
+  text-align: center;
+}
 
 /* Filters */
 
@@ -394,8 +391,7 @@ header {
   perspective: 1000px;
 }
 
-.card-container:hover .card,
-.card-container.hover .card {
+.card-container.flip .card {
   transform: rotateY(180deg);
   transform-origin: 50% 50% -1em;
 }
@@ -419,6 +415,7 @@ header {
 
 .card .front {
   transform: rotateY(0deg);
+  cursor: pointer;
 }
 
 .front-overlay {
@@ -521,7 +518,7 @@ header {
 /* EDUCATION */
 /**************************************************/
 
-[data-title="education"] .date {
+.education .date {
   float: right;
 }
 

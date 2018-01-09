@@ -94,10 +94,12 @@ $(function() {
       Projects.clearFilters();
       this.$projectPageLink.eq(0).trigger('click');
 
-      $otherCards.css({ opacity: 0 })
+      $otherCards.removeClass('flip')
+        .css({ opacity: 0 })
         .delay(1000)
         .animate({ opacity: 1 }, 5000);
 
+        $card.addClass('flip');
       setTimeout(Projects.scrollToCard.bind(Projects, $card), 1100);
     },
 
@@ -106,7 +108,6 @@ $(function() {
     },
 
     init: function() {
-      // this.setSkillsLinks();
       this.bindEvents();
     },
   };
@@ -188,9 +189,15 @@ $(function() {
       scrollTo($card.offset().top - 50, 1000);
     },
 
+    flipCard: function(e) {
+      var $cardContainer = $(e.currentTarget);
+      $cardContainer.toggleClass("flip");
+    },
+
     bindEvents: function() {
       $('#project-filter :checkbox').on('change', this.filter.bind(this));
       $('#project-filter .checkbox').on('click', this.checkboxChange.bind(this));
+      $(".card-container").on('click', this.flipCard.bind(this));
     },
 
     renderFilters: function() {
