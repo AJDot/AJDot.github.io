@@ -10,8 +10,8 @@ function loadJSON(file, callback) {
   request.send();
 };
 
-function scrollTo(height) {
-  $("html, body").animate({ scrollTop: String(height) }, 500);
+function scrollTo(height, duration) {
+  $("html, body").animate({ scrollTop: String(height) }, duration);
 };
 
 
@@ -185,7 +185,7 @@ $(function() {
     },
 
     scrollToCard: function($card) {
-      scrollTo($card.offset().top - 50);
+      scrollTo($card.offset().top - 50, 1000);
     },
 
     bindEvents: function() {
@@ -262,7 +262,7 @@ $(function() {
 
       this.$articles.fadeOut(400).filter('[data-title=' + title + ']').delay(400).fadeIn(400);
 
-      scrollTo(0);
+      scrollTo(0, 500);
       this.activateNavItem(title);
     },
 

@@ -143,7 +143,7 @@
   },
   {
     "id": 7,
-    "name": "Nutrition Label",
+    "name": "Nutrition Facts Label",
     "imgSource": "https://drive.google.com/thumbnail?id=1jH4xk_EK8yUlUkwqA_gQJ36f91zC8ana",
     "imgClasses": "left top",
     "live": {
@@ -225,6 +225,56 @@
     "features": [
       "Built from scratch",
       "Clean designs"
+    ],
+    "filters": ["HTML & CSS", "JavaScript"]
+  },
+  {
+    "id": 11,
+    "name": "Recipe Manager",
+    "imgSource": "https://drive.google.com/thumbnail?id=1jJgJE52SLjCZasRzrnj4xE0ddRmN8wtl",
+    "imgClasses": "left top",
+    "live": {
+      "location": "https://ah-recipe-manager.herokuapp.com/",
+      "title": "Heroku Live Site"
+    },
+    "source": {
+      "location": "https://github.com/AJDot/recipe_manager",
+      "title": "GitHub Source Code"
+    },
+    "skills": [
+      "HTML & CSS",
+      "Ruby",
+      "SQL"
+    ],
+    "features": [
+      "Built from scratch",
+      "Clean designs",
+      "Custom SQL Interface",
+      "Utilizes ERB templates"
+    ],
+    "filters": ["HTML & CSS", "Ruby", "SQL"]
+  },
+  {
+    "id": 12,
+    "name": "To-Do Lists",
+    "imgSource": "https://drive.google.com/thumbnail?id=1mxtS-CmJB9HOy2J33hjEqAIlsVoTUdjx",
+    "imgClasses": "top",
+    "live": {
+      "location": "https://preview.c9users.io/ajdot/todo_lists/index.html?_c9_id=livepreview2&_c9_host=https://ide.c9.io",
+      "title": "Cloud9 Live Site"
+    },
+    "source": {
+      "location": "https://ide.c9.io/ajdot/todo_lists",
+      "title": "Cloud9 Source Code"
+    },
+    "skills": [
+      "HTML & CSS",
+      "JavaScript"
+    ],
+    "features": [
+      "Built from scratch",
+      "Utilizes localStorage",
+      "Utilizes Handlebars templates"
     ],
     "filters": ["HTML & CSS", "JavaScript"]
   }

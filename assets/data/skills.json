@@ -14,9 +14,8 @@
       "Ruby on Rails"
     ],
     "projects": [
-      { "id": "", "name": "Photography Site" },
       { "id": "2", "name": "PostIt!" },
-      { "id": "", "name": "Recipe Manager" },
+      { "id": "11", "name": "Recipe Manager" },
       { "id": "4", "name": "Ruby Terminal Games" }
     ]
   },
@@ -55,10 +54,9 @@
       "Handlebars"
     ],
     "projects": [
-      { "id": "", "name": "Photography Site" },
       { "id": "1", "name": "Calculator" },
       { "id": "3", "name": "Dictionary" },
-      { "id": "", "name": "To-Do Lists" },
+      { "id": "12", "name": "To-Do Lists" },
       { "id": "6", "name": "Contact Manager" },
       { "id": "5", "name": "2D Ising Model" }
     ],
@@ -77,8 +75,8 @@
       "Convert photoshop design files to HTML/CSS"
     ],
     "projects": [
-      { "id": "", "name": "Photography Site" },
-      { "id": "", "name": "To-Do Lists" },
+      { "id": "11", "name": "Recipe Manager" },
+      { "id": "12", "name": "To-Do Lists" },
       { "id": "9", "name": "JS Conf BR 2014 Clone" }
     ],
     "snippets": [
@@ -102,7 +100,7 @@
       "Create database-back web applications"
     ],
     "projects": [
-      { "id": "", "name": "Recipe Manager" }
+      { "id": "11", "name": "Recipe Manager" }
     ]
   },
   {
