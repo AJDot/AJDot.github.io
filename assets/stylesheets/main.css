@@ -28,20 +28,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  padding: 10px;
-  font-size: 36px;
+  padding: .625rem;
+  font-size: 2.25em;
   text-align: center;
 }
 
 h2 {
-  padding: 20px;
-  margin-bottom: 10px;
-  font-size: 24px;
+  padding: 1.25rem;
+  margin-bottom: .625rem;
+  font-size: 1.5em;
 }
 
 h3 {
-  margin: 10px;
-  font-size: 20px;
+  margin: .625rem;
+  font-size: 1.25em;
 }
 
 .container {
@@ -57,11 +57,12 @@ h3 {
 .container > nav,
 .container > nav::before {
   width: 150px;
+  transition: all .3s ease;
 }
 
 .container > nav {
   float: left;
-  padding: 50px 10px;
+  padding: 3.125em .625em;
   text-align: center;
   box-sizing: border-box;
 }
@@ -77,24 +78,25 @@ h3 {
 }
 
 .container > nav li {
-  margin: 20px 0;
+  margin: 1.25em 0;
   text-transform: uppercase;
 }
 
 .container > nav a {
   display: inline-block;
-  padding: 5px;
-  transition: text-indent .2s ease;
+  padding: .3125rem;
+  transition: all .2s ease;
 }
 
-.container > nav a:hover {
-  text-indent: 15px;
+.container > nav a:hover,
+.container > nav a.active {
+  text-indent: 1rem;
 }
 
 .container > nav a > i {
   display: block;
-  margin: 10px auto;
-  font-size: 72px;
+  margin: .625rem auto;
+  font-size: 4.5em;
   text-indent: 0;
   transition: filter .1s linear;
 }
@@ -118,7 +120,7 @@ h3 {
 
 main,
 main::before {
-  width: calc(100% - 150px);
+  transition: all .3s ease;
 }
 
 main {
@@ -147,7 +149,7 @@ header {
 /**************************************************/
 
 .content {
-  padding: 20px;
+  padding: 1.25rem;
   box-sizing: border-box;
 }
 
@@ -156,14 +158,14 @@ header {
 }
 
 .content p {
-  margin: 10px 0;
+  margin: .625rem 0;
 }
 
 .content img {
   float: right;
   width: 400px;
   height: 400px;
-  margin: 10px;
+  margin: .625rem;
 }
 
 /**************************************************/
@@ -178,13 +180,43 @@ header {
 /* BIO */
 /**************************************************/
 
+#bioBox {
+  margin-bottom: 2em;
+}
+
 .bio section + section {
-  margin-top: 20px;
-  border-top: 1px solid #cccccc;
+  margin-top: 1.25rem;
+}
+
+.bio section h3 {
+  font-size: .8em;
+  text-transform: uppercase;
 }
 
 .bio p {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.3;
   text-align: justify;
+}
+
+.bio section.active {
+  padding-bottom: .5em;
+  box-shadow: 0 0 16px rgba(0,0,0,0.4);
+}
+
+.bio section.active h3 {
+  color: #ffffff;
+  background: #333333;
+}
+
+.bio section.active p {
+  padding: .3rem;
+}
+
+.old-exp-section .date::before {
+  content: " / ";
 }
 
 /**************************************************/
@@ -195,7 +227,7 @@ header {
 
 .skill {
   padding: 0;
-  margin: 0 15px;
+  margin: 0 1rem;
   border-left: 1px solid #333333;
   border-right: 1px solid #333333;
   transition: all .3s ease;
@@ -203,8 +235,8 @@ header {
 
 .skill:first-of-type {
   border-top: 1px solid #333333;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
+  border-top-right-radius: .3125rem;
+  border-top-left-radius: .3125rem;
 }
 
 .skill + .skill {
@@ -213,8 +245,8 @@ header {
 
 .skill:last-of-type {
   border-bottom: 1px solid #333333;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: .3125rem;
+  border-bottom-left-radius: .3125rem;
 }
 
 .skill:not(:first-of-type) .skill-section {
@@ -222,7 +254,7 @@ header {
 }
 
 .skill.active {
-  margin: 0 0 5px 0;
+  margin: 0 0 .3125rem 0;
   border-bottom: 1px solid #333333;
   box-shadow: 0 0 16px rgba(0,0,0,0.4);
 }
@@ -245,7 +277,7 @@ header {
   display: inline-block;
   content: '\00bb';
   font-size: 1.2em;
-  padding: 5px;
+  padding: .3125rem;
   transition: transform .3s ease;
 }
 
@@ -256,12 +288,12 @@ header {
 /* Skill Section */
 
 .skill-section {
-  padding: 10px;
+  padding: .625rem;
   margin: 0;
 }
 
 .skills li {
-  padding: 3px 10px;
+  padding: 3px .625rem;
   border-top: 1px solid transparent;
 }
 
@@ -275,7 +307,7 @@ header {
 }
 
 .skill-list h4 {
-  padding: 5px;
+  padding: .3125rem;
   text-align: center;
   color: #ffffff;
   background: #333333;
@@ -288,13 +320,13 @@ header {
 
 .skill-list li a {
   display: block;
-  padding: 10px;
+  padding: .625em;
   border-top: 1px solid #cccccc;
 }
 
 .skill-list li a:before {
   content: "\00BB";
-  padding: 0 5px 0 0;
+  padding: 0 .3125rem 0 0;
 }
 
 .skill-list li a:hover {
@@ -308,7 +340,7 @@ header {
 /**************************************************/
 
 .projects h3 {
-  margin: 20px 0;
+  margin: 1.25rem 0;
   text-align: center;
 }
 
@@ -324,12 +356,12 @@ header {
 
 #project-filter {
   text-align: center;
-  margin: 0 0 30px 0;
+  margin: 0 0 1.875rem 0;
 }
 
 #project-filter li {
   display: inline-block;
-  margin: 0 30px 0 0;
+  margin: 0 1.875rem 0 0;
 }
 
 #project-filter input {
@@ -339,12 +371,13 @@ header {
 #project-filter input + .checkbox {
   position: relative;
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 1.25em;
+  height: 1.25em;
   vertical-align: middle;
   background: #444444;
   border-radius: 100%;
   transition: all .3s ease;
+  cursor: pointer;
 }
 
 #project-filter input + .checkbox::after {
@@ -352,12 +385,11 @@ header {
   position: absolute;
   top: 50%;
   left: 0;
-  margin-left: 15px;
+  margin-left: 1em;
   transform: translateY(-50%) rotate(-90deg);
-  border-width: 30px 10px 0 10px;
+  border-width: 1.875em .625em 0 .625em;
   border-style: solid;
   border-color: #444444 transparent transparent transparent;
-  cursor: pointer;
   transition: all .3s ease;
 }
 
@@ -372,21 +404,21 @@ header {
 
 #project-filter label {
   vertical-align: middle;
-  margin-left: 20px;
+  margin-left: 1.25rem;
   cursor: pointer;
 }
 
 /* Cards */
 
 #cardBox {
-  margin-top: 30px;
+  margin-top: 1.875rem;
   text-align: center;
 }
 
 .card-container {
   display: inline-block;
-  width: 300px;
-  height: 400px;
+  width: 18.75em;
+  height: 25em;
   border: 1px solid #cccccc;
   perspective: 1000px;
 }
@@ -427,45 +459,45 @@ header {
 }
 
 .card .back {
-  padding: 10px;
+  padding: .625rem;
   color: #ffffff;
   background: rgba(69, 69, 69, 0.8);
   transform: rotateY(180deg) translateZ(2.0em);
   box-sizing: border-box;
 }
 
-.back h3 {
-  margin: 0 0 20px;
+.card .back h3 {
+  margin: 0 0 1.25rem;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: bold;
   text-align: center;
   text-shadow: 1px 2px 3px black, 1px 2px 3px black;
 }
 
-.back h4 {
+.card .back h4 {
   display: inline-block;
-  padding-bottom: 5px;
-  margin: 0 0 5px;
+  padding-bottom: .3125rem;
+  margin: 0 0 .3125rem;
   font-size: 1.1em;
   font-weight: normal;
-  border-bottom: 3px solid #ffffff;
+  border-bottom: .1875em solid #ffffff;
   text-shadow: 1px 2px 3px black;
 }
 
-.back ul {
+.card .back ul {
   padding: 0;
-  margin: 0 10px 25px;
+  margin: 0 .625em 1.5625em;
   list-style: none;
   text-align: center;
   font-size: .9em;
 }
 
-.back li {
+.card .back li {
   margin: 4px 0;
 }
 
-.back li::before {
+.card .back li::before {
 }
 
 .card iframe {
@@ -497,10 +529,10 @@ header {
   object-position: left top;
 }
 
-.back .card-link {
+.card .back .card-link {
   display: block;
   padding: 6px 4px;
-  margin: 10px 0;
+  margin: .625rem 0;
   text-align: center;
   color: inherit;
   text-decoration: none;
@@ -509,7 +541,7 @@ header {
   transition: color .3s ease, background .3s ease;
 }
 
-.back .card-link:hover {
+.card .back .card-link:hover {
   color: rgba(69, 69, 69, 0.8);
   background: #ffffff;
 }
@@ -518,34 +550,30 @@ header {
 /* EDUCATION */
 /**************************************************/
 
-.education .date {
-  float: right;
-}
-
 .school {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .old-exp-section {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .old-exp-section ul {
-  margin-bottom: 10px;
+  margin-bottom: .625rem;
 }
 
 .old-exp-section li {
-  margin-bottom: 5px;
+  margin-bottom: .3125rem;
 }
 
 .old-exp-section + .old-exp-section {
-  padding-top: 15px;
+  padding-top: 1rem;
   border-top: 1px solid #cccccc;
 }
 
 .exp-details li:before {
   content: "\00BB";
-  padding: 0 5px 0 0;
+  padding: 0 .3125rem 0 0;
 }
 
 /**************************************************/
@@ -571,7 +599,8 @@ article[data-title="contact"] h3 {
 /**************************************************/
 
 footer {
-  padding: 30px;
+  padding: 1.875em;
+  font-size: .9em;
   text-align: center;
   color: #ffffff;
   background: #333333;
@@ -579,19 +608,19 @@ footer {
 
 footer ul li {
   display: inline-block;
-  margin: 0 20px;
-  font-size: 36px;
+  margin: 0 1.25rem;
+  font-size: 2.25em;
 }
 
 footer ul a {
   display: inline-block;
-  padding: 5px;
+  padding: .3125rem;
   transition: transform .2s ease;
   box-sizing: border-box;
 }
 
 footer ul a:hover {
-  transform: translateY(-5px);
+  transform: translateY(-.3125rem);
 }
 
 footer ul a > i {
@@ -612,4 +641,288 @@ footer ul a:hover > i {
   content: "";
   display: block;
   clear: both;
+}
+
+
+/**************************************************/
+/* MEDIA QUERIES */
+/**************************************************/
+
+@media screen and (max-width: 768px) {
+  h1 {
+    padding: .5rem;
+    font-size: 1.75em;
+  }
+
+  h2 {
+    padding: .5rem;
+    font-size: 1.25em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  /**************************************************/
+  /* NAVIGATION */
+  /**************************************************/
+
+  .container nav {
+    padding: 1em 0;
+    font-size: .8em;
+  }
+
+  .container > nav,
+  .container > nav::before {
+      width: 100px;
+  }
+
+  .container > nav li {
+    margin: 0;
+  }
+
+  /**************************************************/
+  /* MAIN */
+  /**************************************************/
+
+
+  /**************************************************/
+  /* CONTENT */
+  /**************************************************/
+
+  .content {
+    padding: 0 1rem;
+  }
+
+  /**************************************************/
+  /* BIO */
+  /**************************************************/
+
+  .bio section + section {
+    border-top: 1px solid #cccccc;
+  }
+
+  .bio p {
+    font-size: .9rem;
+  }
+
+  /**************************************************/
+  /* EDUCATION */
+  /**************************************************/
+
+  .school {
+    font-size: .9em;
+  }
+
+  .education {
+    font-size: .9em;
+  }
+
+  .school-section li {
+    font-size: .9rem;
+  }
+
+  .old-exp-section li {
+    font-size: .9em;
+  }
+
+  /**************************************************/
+  /* SKILLS */
+  /**************************************************/
+
+  #skillBox {
+    font-size: .8rem;
+    margin-bottom: 1em;
+  }
+
+  .skill-list {
+    display: block;
+    margin-bottom: .5em;
+  }
+  /**************************************************/
+  /* PROJECTS */
+  /**************************************************/
+
+  .projects h3 {
+    margin: 0.5rem 0;
+  }
+
+  #project-filter {
+    margin: 0 0 0.375rem 0;
+  }
+
+  #project-filter li {
+    margin: 0 1.875rem 0.3rem 0;
+    font-size: .9rem;
+    box-sizing: border-box;
+  }
+
+  #project-filter input + .checkbox::after {
+    border-width: 0;
+    border-color: transparent;
+  }
+
+  #project-filter label {
+    margin-left: .25rem;
+  }
+
+  #cardBox {
+    margin-top: .875rem;
+  }
+
+  .card-container {
+    width: 16.4em;
+    height: 21.875em;
+  }
+
+  .card .back {
+    padding: .3rem;
+  }
+
+  .card .back h3 {
+    margin: 0 0 0 .3rem;
+    font-size: 1.2em;
+  }
+
+  .card .back .card-link {
+    margin: .625rem 0.4rem .3rem;
+    font-size: 0.9rem;
+    border-bottom-width: .1em;
+  }
+
+  .card .back h4 {
+    font-size: 1em;
+  }
+
+  .card .back ul {
+    margin: 0 .625em 0.5em;
+    font-size: .8em;
+  }
+
+  /**************************************************/
+  /* FOOTER */
+  /**************************************************/
+
+  footer {
+    padding: 1em;
+    transition: all .3s ease;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  h1 {
+    padding: .3rem;
+    font-size: 1.25em;
+  }
+
+  h2 {
+    padding: .3rem;
+    font-size: 1em;
+  }
+
+  h3 {
+    font-size: .9em;
+  }
+
+  /**************************************************/
+  /* NAVIGATION */
+  /**************************************************/
+
+  .container > nav,
+  .container > nav::before {
+    width: 100%;
+  }
+
+  .container > nav {
+    float: none;
+    position: relative;
+    padding: 0;
+  }
+
+  .container > nav::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .container > nav li {
+    display: inline-block;
+  }
+
+  .container > nav a > span {
+    display: none;
+  }
+
+  .container > nav a > i {
+    font-size: 3em;
+  }
+
+  .container > nav a:hover,
+  .container > nav a.active {
+    text-indent: 0;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  /**************************************************/
+  /* MAIN */
+  /**************************************************/
+
+  /**************************************************/
+  /* CONTENT */
+  /**************************************************/
+
+  /**************************************************/
+  /* BIO */
+  /**************************************************/
+
+  .bio section h3 {
+    padding: .625rem;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .bio section h3:hover {
+    color: #ffffff;
+    background: #333333;
+  }
+
+  .bio p {
+    margin: 1em;
+    font-size: .7rem;
+  }
+
+  /**************************************************/
+  /* EDUCATION */
+  /**************************************************/
+
+  /**************************************************/
+  /* SKILLS */
+  /**************************************************/
+
+  /**************************************************/
+  /* PROJECTS */
+  /**************************************************/
+
+  #project-filter {
+    text-align: left;
+  }
+
+  #project-filter li {
+    width: 49%;
+    margin: 0;
+    text-align: left;
+  }
+
+  #project-filter::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  /**************************************************/
+  /* FOOTER */
+  /**************************************************/
+
 }

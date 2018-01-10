@@ -26,7 +26,9 @@ $(function() {
 
   var Biography = {
     $bioBox: $('#bioBox'),
+    $sections: null,
     bioData: [],
+    activeClassName: "active",
 
     setBioData: function(response) {
       this.bioData = response;
@@ -40,7 +42,60 @@ $(function() {
       loadJSON("assets/data/bio.json", function(response) {
         this.setBioData(response);
         this.renderBio();
+        this.$sections = this.$bioBox.find('section');
+        this.eventsAfterBioRender();
       }.bind(this));
+    },
+
+    eventsAfterBioRender: function() {
+      this.setupMediaQuery();
+    },
+
+    setupMediaQuery: function() {
+      if (matchMedia) {
+        const mq = window.matchMedia("screen and (max-width: 480px)");
+        mq.addListener(App.widthChange.bind(this));
+        App.widthChange(mq);
+      }
+    },
+
+    setupAccordion: function() {
+      this.$bioBox.find('section + section p').hide();
+      this.$sections.first().addClass(this.activeClassName);
+    },
+
+    teardownAccordion: function() {
+      this.$sections.removeClass(this.activeClassName).find('p').show();
+    },
+
+    revealSection: function(e) {
+      e.preventDefault();
+      var $section = $(e.currentTarget).closest('section');
+      var $others = this.$sections.not($section);
+
+      $section.addClass(this.activeClassName);
+      $others.removeClass(this.activeClassName);
+
+      $section.find('p').slideDown();
+      $others.find('p').slideUp();
+    },
+
+    bindFoldSections: function() {
+      this.$bioBox.on('click', 'h3', this.revealSection.bind(this));
+    },
+
+    unbindFoldSections: function() {
+      this.$bioBox.off('click');
+    },
+
+    setupAccordionSections: function() {
+      this.setupAccordion();
+      this.bindFoldSections();
+    },
+
+    teardownAccordionSections: function() {
+      this.teardownAccordion();
+      this.unbindFoldSections();
     },
 
     init: function() {
@@ -52,8 +107,8 @@ $(function() {
     $skillBox: $('#skillBox'),
     skillsData: [],
     $skills: null,
-    $skillHeadings: $('[data-skill-heading]'),
-    $skillSections: $('[data-skill]'),
+    $skillHeadings: $('h3 a[data-skill]'),
+    $skillSections: $('section[data-skill]'),
     activeClassName: 'active',
 
     setSkills: function(response) {
@@ -63,8 +118,9 @@ $(function() {
     renderSkills: function() {
       this.$skillBox.html(App.templates.skills_template({ skills: this.skillsData }));
       this.$skills = $('.skill');
-      this.$skillHeadings = $('[data-skill-heading]');
-      this.$skillSections = $('[data-skill]');
+      this.$skillHeadings = $('h3 a[data-skill]');
+      console.log(this.$skillHeadings);
+      this.$skillSections = $('section[data-skill]');
     },
 
     eventsAfterSkillRender: function() {
@@ -84,11 +140,10 @@ $(function() {
     revealSkill: function(e) {
       e.preventDefault();
       var $skill = $(e.currentTarget).closest('.skill');
-      var className = 'active';
       $skill.addClass(this.activeClassName);
       this.$skills.not($skill).removeClass(this.activeClassName);
 
-      var skill = $(e.currentTarget).attr('data-skill-heading');
+      var skill = $(e.currentTarget).attr('data-skill');
       var $current= this.$skillSections.filter('[data-skill="' + skill + '"]');
       var $others = this.$skillSections.not($current);
       $current.slideDown();
@@ -96,6 +151,7 @@ $(function() {
     },
 
     bindEvents: function() {
+      console.log(this.$skillHeadings);
       this.$skillHeadings.on('click', this.revealSkill.bind(this));
     },
 
@@ -299,6 +355,14 @@ $(function() {
 
     activateNavItem: function(title) {
       $('nav a').removeClass(this.activeClassName).filter('[data-title=' + title + ']').addClass(this.activeClassName);
+    },
+
+    widthChange: function(mq) {
+      if (mq.matches) {
+        Biography.setupAccordionSections();
+      } else {
+        Biography.teardownAccordionSections();
+      }
     },
 
     bindEvents: function() {
