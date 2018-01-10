@@ -104,7 +104,7 @@ $(function() {
     },
 
     bindEvents: function() {
-      $('.projects a').on('click', this.navToProjectCard.bind(this));
+      $('.skill-list.projects a').on('click', this.navToProjectCard.bind(this));
     },
 
     init: function() {
