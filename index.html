@@ -52,6 +52,25 @@
         <h1>Alex J. Henegar</h1>
       </header>
       <div class="content">
+        <article class="bio clearfix" data-title="bio">
+          <h2>Biography</h2>
+          <div id="bioBox">
+            <script id="bio_template" type="text/x-handlebars">
+              {{#each sections}}
+                {{> bio_section_partial}}
+              {{/each}}
+            </script>
+
+            <script id="bio_section_partial" data-type="partial" type="text/x-handlebars">
+              <section>
+                <h3>{{title}}</h3>
+                {{#each paragraphs}}
+                  <p>{{this}}</p>
+                {{/each}}
+              </section>
+            </script>
+          </div>
+        </article>
         <article class="education clearfix" data-title="education">
           <h2>Education</h2>
           <div class="school">
@@ -134,25 +153,6 @@
                 <li>Tutoring for introductory physics courses was an open session three hours/week.</li>
               </ul>
             </section>
-          </div>
-        </article>
-        <article class="bio clearfix" data-title="bio">
-          <h2>Biography</h2>
-          <div id="bioBox">
-            <script id="bio_template" type="text/x-handlebars">
-              {{#each sections}}
-                {{> bio_section_partial}}
-              {{/each}}
-            </script>
-
-            <script id="bio_section_partial" data-type="partial" type="text/x-handlebars">
-              <section>
-                <h3>{{title}}</h3>
-                {{#each paragraphs}}
-                  <p>{{this}}</p>
-                {{/each}}
-              </section>
-            </script>
           </div>
         </article>
         <article class="clearfix" data-title="skills">
