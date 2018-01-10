@@ -11,3 +11,7 @@
   * [ ] Photography Site
   * [x] To-Do Lists
   * [x] Recipe Manager
+
+* [ ] Proofread biography
+* [ ] Update education (resume)
+  * [ ] Include launch school in formal education section

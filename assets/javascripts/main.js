@@ -24,6 +24,30 @@ function generateSlug(string) {
 
 $(function() {
 
+  var Biography = {
+    $bioBox: $('#bioBox'),
+    bioData: [],
+
+    setBioData: function(response) {
+      this.bioData = response;
+    },
+
+    renderBio: function() {
+      this.$bioBox.html(App.templates.bio_template({ sections: this.bioData }));
+    },
+
+    fetchAndRenderBio: function() {
+      loadJSON("assets/data/bio.json", function(response) {
+        this.setBioData(response);
+        this.renderBio();
+      }.bind(this));
+    },
+
+    init: function() {
+      this.fetchAndRenderBio();
+    },
+  }
+
   var Skills = {
     $skillBox: $('#skillBox'),
     skillsData: [],
@@ -286,6 +310,7 @@ $(function() {
       this.registerPartials();
       this.removeHandlebarsScripts();
       this.bindEvents();
+      Biography.init();
       Skills.init();
       Projects.init();
     },
