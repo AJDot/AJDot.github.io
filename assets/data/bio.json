@@ -2,27 +2,27 @@
   {
     "title": "Physics",
     "paragraphs": [
-      "My background is in physics. I went to college for physics. I got my doctorate in physics. Graduate school was tough - 70-100+ hour weeks of learning and solving complex physics problems that always seemed to require skills beyond my own. It was miserable and rewarding, tiring and worth it. It was the difficulty that made the work appealing, the teamwork with my cohort that made it better. I loved physics, or so I thought.",
-      "After 2½ years of intense courses, they were over. Graduate research was underway and it was a different animal. It was slow and steady and allowed me to see what a career in physics would be like. It seemed the life of a research scientist was filled with more politics than physics. My work lasted 3 years and over that time I drifted away from physics."
+      "My background is in physics. After 10 years of higher education, I received my doctorate in Physics from UMBC. I enjoyed the first years of graduate work; learning and solving physics problems was miserable yet rewarding, tiring but worthwhile. It was the difficulty that made the work appealing and the teamwork with my cohort that made it better. I loved physics, or so I thought.",
+      "After 2½ years of classes, I received my M.S. in physics and began my PhD research. After three more years of research, I realized that the life of a research scientist wasn’t for me. It was too theoretical and my time seemed to be filled with more politics than physics. While working diligently to complete my doctorate, I began to drift away from physics."
     ]
   },
   {
     "title": "Realization",
     "paragraphs": [
-      "I had only a handful of opportunities to experience programming as a graduate student. I taught myself LabVIEW to interface with scientific equipment, VPython to create physics modeling assignments for students, and Mathematica theoretical physics simulations. It was through these experiences I discovered my passion for programming. I built a program that took a process that required 48 hours of attention to one that required only 10 minutes to set up for automation. It was moments like this that I enjoyed that most. I realized programming requires complex logical skills but still allows me to be creative. It is an endless source of puzzles to create and solve from start to end."
+      "I had only a handful of opportunities to experience programming as a graduate student. I taught myself LabVIEW to interface with scientific equipment, VPython to create physics modeling assignments for students, and Mathematica to build theoretical physics simulations. It was through these experiences that I discovered my passion for programming. To aid my research, I built a program that, through automation, turned a process that once required 48 hours of attention to one that required only 10 minutes to set up. I came to realize that it was experiences like this, that allowed me to solve complex puzzles creatively, that I enjoyed that most."
     ]
   },
   {
     "title": "Web development",
     "paragraphs": [
-      "By the time I graduated I knew I wanted to become a programmer. After graduation, I spent some time contemplating this tremendous decision to drop everything I had worked towards the past 10 years and join a new field. I decided to learn web development. I needed to learn the skills of the trade but I also needed to pay rent. I went to work for one year as the Director of Tutoring at a rising tutoring company.",
-      "Meanwhile, I narrowed down my strategy on how I was going to learn web development and chose to enroll in Launch School. For six months, I studied at Launch School during every spare moment I had. It quickly became apparent that this was indeed my passion, so I quit my job to study at Launch School full-time. Now, almost one year into the program, I look back and can safely say that programming is where I belong."
+      "By the time I graduated I knew I wanted to become a programmer. Dropping everything I had worked towards for the past 10 years was not a decision I made lightly, but I knew my passion and happiness  would be found not as a physicist, but as a programmer. I decided to learn web development. I needed to learn the skills of the trade but I also needed to pay rent so I worked as the Director of Tutoring at a small tutoring company for one year.",
+      "Meanwhile, I considered ways to achieve my new goals and chose to enroll in <a href='https://launchschool.com/' class='inline-anchor' target='_blank'>Launch School</a>. For six months, I studied there in my spare time. It quickly became apparent that this was indeed my passion, so I quit my job to study at Launch School full-time. Now, almost one year into the program, I look back and can honestly say that programming is where I belong."
       ]
   },
   {
     "title": "What's next?",
     "paragraphs": [
-      "Please explore this site and see what I have accomplished in my one year of learning. Do you think I have potential? I am actively looking for a position in web development and would love to hear about opportunities. Please send me a message."
+      "Please explore this site and see what I have accomplished in my one year of learning. Do you think I have potential? I am actively looking for a position in web development and would love to hear about opportunities. Please <a href='#' class='inline-anchor' data-title='contact'>send me a message</a>."
     ]
   }
 ]

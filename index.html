@@ -23,7 +23,7 @@
         </li>
         <li>
           <a href="#" data-title="education">
-            <span>Education</span>
+            <span>Education / Work</span>
             <i class="fa fa-university" aria-hidden="true"></i>
           </a>
         </li>
@@ -65,7 +65,7 @@
               <section>
                 <h3>{{title}}</h3>
                 {{#each paragraphs}}
-                  <p>{{this}}</p>
+                  <p>{{{this}}}</p>
                 {{/each}}
               </section>
             </script>
@@ -89,7 +89,7 @@
           </div>
           <hr />
           <div class="old-exp">
-            <h3>Research Experience</h3>
+            <h2>Research Experience</h2>
             <section class="old-exp-section">
               <ul>
                 <li>Doctoral Research <span class="date"><time datetime="2012-08">Aug 2012</time> - <time datetime="2015-12">Dec 2015</time></span> <small>(UMBC)</small></li>
@@ -114,7 +114,7 @@
           </div>
           <hr />
           <div class="old-exp">
-            <h3>Teaching Experience</h3>
+            <h2>Teaching Experience</h2>
             <section class="old-exp-section">
               <ul>
                 <li>Director of Tutoring and Test Prep <span class="date"><time datetime="2016-08">Aug 2016</time> - <time datetime="2017-08">Aug 2017</time></span> <small><a href="https://mathetc.org/" class="inline-anchor" target="_blank">(Math ETC, Bowie, MD)</a></small></li>
@@ -157,6 +157,7 @@
         </article>
         <article class="clearfix" data-title="skills">
           <h2>Skills</h2>
+          <h3>Click a skill to see details.</h3>
           <div id="skillBox">
 
             <script id="skills_template" type="text/x-handlebars">
@@ -227,7 +228,7 @@
             </ul>
           </section>
 
-          <h3>Tap a card to see details.</h3>
+          <h3>Click a card to see details.</h3>
           <div id="cardBox" class="clearfix">
 
             <script id="cards_template" type="text/x-handlebars">
@@ -278,7 +279,7 @@
 
           </div>
         </article>
-        <article class="clearfix" data-title="contact">
+        <article class="contact clearfix" data-title="contact">
           <h3>Like what you've seen? Think I may enjoy contributing at your company?</h3>
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeZNJzImDdn9jEYgpRvElGXnyIb5K5mXLAmDSz1ipDTcVaDtQ/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </article>

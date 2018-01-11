@@ -119,13 +119,11 @@ $(function() {
       this.$skillBox.html(App.templates.skills_template({ skills: this.skillsData }));
       this.$skills = $('.skill');
       this.$skillHeadings = $('h3 a[data-skill]');
-      console.log(this.$skillHeadings);
       this.$skillSections = $('section[data-skill]');
     },
 
     eventsAfterSkillRender: function() {
       this.bindEvents();
-      this.$skills.first().addClass(this.activeClassName);
       SkillToProjectLinks.init();
     },
 
@@ -137,7 +135,7 @@ $(function() {
       }.bind(this));
     },
 
-    revealSkill: function(e) {
+    accordionSkill: function(e) {
       e.preventDefault();
       var $skill = $(e.currentTarget).closest('.skill');
       $skill.addClass(this.activeClassName);
@@ -150,9 +148,18 @@ $(function() {
       $others.slideUp();
     },
 
+    toggleSkill: function(e) {
+      e.preventDefault();
+      var $a = $(e.currentTarget);
+      $a.closest('.skill').toggleClass(this.activeClassName);
+
+      var skill = $a.attr('data-skill');
+      var $current= this.$skillSections.filter('[data-skill="' + skill + '"]');
+      $current.slideToggle();
+    },
+
     bindEvents: function() {
-      console.log(this.$skillHeadings);
-      this.$skillHeadings.on('click', this.revealSkill.bind(this));
+      this.$skillHeadings.on('click', this.toggleSkill.bind(this));
     },
 
     init: function() {

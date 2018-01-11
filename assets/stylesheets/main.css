@@ -88,22 +88,25 @@ h3 {
   transition: all .2s ease;
 }
 
-.container > nav a:hover,
-.container > nav a.active {
-  text-indent: 1rem;
+.container > nav a span {
+  display: inline-block;
+  transition: all .2s ease;
+}
+
+.container > nav a:hover span,
+.container > nav a.active span {
+  transform: translateY(-.3125rem);
 }
 
 .container > nav a > i {
   display: block;
   margin: .625rem auto;
   font-size: 4.5em;
-  text-indent: 0;
   transition: filter .1s linear;
 }
 
 .container > nav a:hover > i,
 .container > nav a.active > i {
-  text-indent: 0;
   -webkit-filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.6));
   filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.6));
 }
@@ -189,6 +192,9 @@ header {
 }
 
 .bio section h3 {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: .8em;
   text-transform: uppercase;
 }
@@ -225,6 +231,10 @@ header {
 
 /* Skill Box */
 
+article[data-title="skills"] > h3 {
+  text-align: center;
+}
+
 .skill {
   padding: 0;
   margin: 0 1rem;
@@ -249,7 +259,7 @@ header {
   border-bottom-left-radius: .3125rem;
 }
 
-.skill:not(:first-of-type) .skill-section {
+.skill .skill-section {
   display: none;
 }
 
@@ -580,17 +590,17 @@ header {
 /* CONTACT */
 /**************************************************/
 
-article[data-title="contact"] iframe {
+.contact iframe {
   padding: 0;
   margin: 0;
   border: none;
   height: 700px;
-  min-width: 400px;
+  /*min-width: 400px;*/
   width: 100%;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, .8);
 }
 
-article[data-title="contact"] h3 {
+.contact h3 {
   text-align: center;
 }
 
@@ -731,13 +741,17 @@ footer ul a:hover > i {
   /**************************************************/
 
   #skillBox {
-    font-size: .8rem;
+    font-size: .9rem;
     margin-bottom: 1em;
   }
 
   .skill-list {
     display: block;
     margin-bottom: .5em;
+  }
+
+  .skill-list li {
+    font-size: .95em;
   }
   /**************************************************/
   /* PROJECTS */
@@ -873,6 +887,10 @@ footer ul a:hover > i {
   /* CONTENT */
   /**************************************************/
 
+  .content {
+    padding: 0;
+  }
+
   /**************************************************/
   /* BIO */
   /**************************************************/
@@ -890,12 +908,23 @@ footer ul a:hover > i {
 
   .bio p {
     margin: 1em;
-    font-size: .7rem;
+    font-size: .8rem;
   }
 
   /**************************************************/
   /* EDUCATION */
   /**************************************************/
+
+  .education {
+    padding: .5rem;
+  }
+
+  .education h2 {
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+    color: #ffffff;
+    background: #333333;
+  }
 
   /**************************************************/
   /* SKILLS */
@@ -911,8 +940,10 @@ footer ul a:hover > i {
 
   #project-filter li {
     width: 49%;
+    padding: 0 1rem;
     margin: 0;
     text-align: left;
+    box-sizing: border-box;
   }
 
   #project-filter::after {
@@ -924,8 +955,4 @@ footer ul a:hover > i {
   /**************************************************/
   /* FOOTER */
   /**************************************************/
-
-  footer {
-    font-size: .7em;
-  }
 }
