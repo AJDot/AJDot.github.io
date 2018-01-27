@@ -2,59 +2,47 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Portfolio</title>
   <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat" rel="stylesheet">
-  <link rel="stylesheet" href="assets/stylesheets/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/stylesheets/with_bootstrap.css">
   <script src="https://use.fontawesome.com/fd8de1c45c.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/javascripts/main.js"></script>
 </head>
 <body>
-  <div class="container clearfix">
-    <nav>
-      <ul>
-        <li>
-          <a href="#" data-title="bio">
-            <span>Biography</span>
-            <i class="fa fa-address-card-o" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" data-title="education">
-            <span>Education / Work</span>
-            <i class="fa fa-university" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" data-title="skills">
-            <span>Skills</span>
-            <i class="fa fa-bar-chart" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" data-title="projects">
-            <span>Projects</span>
-            <i class="fa fa-code" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" data-title="contact">
-            <span>Contact</span>
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <main>
-      <header>
-        <h1>Alex J. Henegar</h1>
-      </header>
+  <nav class="navbar bg-light">
+    <span class="navbar-brand">Alex J. Henegar</span>
+    <a class="nav-item nav-link" href="#" data-title="bio">
+      <i class="fa fa-address-card-o" aria-hidden="true"></i>
+      <span>Biography</span>
+    </a>
+    <a class="nav-item nav-link" href="#" data-title="education">
+      <i class="fa fa-university" aria-hidden="true"></i>
+      <span>Education / Work</span>
+    </a>
+    <a class="nav-item nav-link" href="#" data-title="skills">
+      <i class="fa fa-bar-chart" aria-hidden="true"></i>
+      <span>Skills</span>
+    </a>
+    <a class="nav-item nav-link" href="#" data-title="projects">
+      <i class="fa fa-code" aria-hidden="true"></i>
+      <span>Projects</span>
+    </a>
+    <a class="nav-item nav-link" href="#" data-title="contact">
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <div class="container-fluid">
+    <main class="container my-4">
       <div class="content">
-        <article class="bio clearfix" data-title="bio">
+        <article data-title="bio">
           <h2>Biography</h2>
-          <div id="bioBox">
+          <div id="bioBox" class="list-group">
             <script id="bio_template" type="text/x-handlebars">
               {{#each sections}}
                 {{> bio_section_partial}}
@@ -62,103 +50,98 @@
             </script>
 
             <script id="bio_section_partial" data-type="partial" type="text/x-handlebars">
-              <section>
-                <h3>{{title}}</h3>
-                {{#each paragraphs}}
-                  <p>{{{this}}}</p>
-                {{/each}}
+              <section class="container list-group-item p-0">
+                <h3 class="m-0"><a class="p-3 m-0" data-toggle="collapse", href="#collapse{{title}}" role="button" aria-expanded="false" aria-controls="#collapse{{title}}">{{title}}</a></h3>
+                <div class="collapse p-3" id="collapse{{title}}">
+                  {{#each paragraphs}}
+                    <p>{{{this}}}</p>
+                  {{/each}}
+                </div>
               </section>
             </script>
           </div>
         </article>
-        <article class="education clearfix" data-title="education">
-          <h2>Education</h2>
-          <div class="school">
-            <p>
-              <span class="date"><time datetime="2017-03">Mar 2017</time> - Present</span>, <a href="https://launchschool.com/" class="inline-anchor" target="_blank">Launch School</a>
-            </p>
-            <p>
-              <span class="date"><time datetime="2015-12">2015</time></span> PhD in Physics, <a href="http://www.umbc.edu/" class="inline-anchor" target="_blank">University of Maryland, Baltimore County</a>
-            </p>
-            <p>
-              <span class="date"><time datetime="2012-05">2012</time></span> M.S. in Physics, <a href="http://www.umbc.edu/" class="inline-anchor" target="_blank">University of Maryland, Baltimore County</a>
-            </p>
-            <p>
-              <span class="date"><time datetime="2010-05">2010</time></span> B.S. in Physics, <a href="http://www.eku.edu/" class="inline-anchor" target="_blank">Eastern Kentucky University</a>, Summa Cum Laude
-            </p>
+        <article data-title="education">
+          <div class="school container card my-4">
+            <div class="card-body">
+              <h2 class="card-title">Education</h2>
+              <p class="card-text">
+                <span class="date"><time datetime="2017-03">Mar 2017</time> - Present</span>, <a href="https://launchschool.com/" class="card-link" target="_blank">Launch School</a>
+              </p>
+              <p class="card-text">
+                <span class="date"><time datetime="2015-12">2015</time></span> PhD in Physics, <a href="http://www.umbc.edu/" class="card-link" target="_blank">University of Maryland, Baltimore County</a>
+              </p>
+              <p class="card-text">
+                <span class="date"><time datetime="2012-05">2012</time></span> M.S. in Physics, <a href="http://www.umbc.edu/" class="card-link" target="_blank">University of Maryland, Baltimore County</a>
+              </p>
+              <p class="card-text">
+                <span class="date"><time datetime="2010-05">2010</time></span> B.S. in Physics, <a href="http://www.eku.edu/" class="card-link" target="_blank">Eastern Kentucky University</a>, Summa Cum Laude
+              </p>
+            </div>
           </div>
-          <hr />
-          <div class="old-exp">
-            <h2>Research Experience</h2>
-            <section class="old-exp-section">
-              <ul>
-                <li>Doctoral Research <span class="date"><time datetime="2012-08">Aug 2012</time> - <time datetime="2015-12">Dec 2015</time></span> <small>(UMBC)</small></li>
-                <li><a href="https://gougousilab.umbc.edu/people-2/" class="inline-anchor" target="_blank">Research Adviser: Dr. Theodosia Gougousi</a></li>
-              </ul>
-              <ul class="exp-details">
-                <li><a href="https://scholar.google.com/citations?user=3D2ztXYAAAAJ&hl=en" class="inline-anchor" target="_blank">Published six papers, four as first author.</a></li>
-                <li>Present research eight times at international conferences.</li>
-                <li>Collaborated with researchers at UMBC, George Mason University, and Johns Hopkins University.</li>
-                <li>Mentored two undergraduate and two graduate students.</li>
-              </ul>
-            </section>
-            <section class="old-exp-section">
-              <ul>
-                <li>Research Experience for Undergraduates <span class="date"><time datetime="2009-06">Jun</time> - <time datetime="2009-07">Jul 2009</time></span> <small>(Vanderbilt University)</small></li>
-                <li>Research Adviser: Dr. Richard Haglund</li>
-              </ul>
-              <ul class="exp-details">
-                <li>Fabricated nanoscale gold metamaterials, analyzed white light extinction spectra. Senior thesis at EKU in May 2010.</li>
-              </ul>
-            </section>
+          <div class="old-exp container card my-4">
+            <div class="card-body">
+            <h2 class="card-title">Research Experience</h2>
+              <section class="old-exp-section card card-body card-text my-4">
+                <h3 class="card-title">Doctoral Research <span class="date"><time datetime="2012-08">Aug 2012</time> - <time datetime="2015-12">Dec 2015</time></span> <small>(UMBC)</small></h3>
+                  <a href="https://gougousilab.umbc.edu/people-2/" class="card-text card-link" target="_blank">Research Adviser: Dr. Theodosia Gougousi</a>
+                <ul class="exp-details">
+                  <li><a href="https://scholar.google.com/citations?user=3D2ztXYAAAAJ&hl=en" class="card-link" target="_blank">Published six papers, four as first author.</a></li>
+                  <li>Present research eight times at international conferences.</li>
+                  <li>Collaborated with researchers at UMBC, George Mason University, and Johns Hopkins University.</li>
+                  <li>Mentored two undergraduate and two graduate students.</li>
+                </ul>
+              </section>
+              <section class="old-exp-section card card-body card-text my-4">
+                <h3 class="card-title">Research Experience for Undergraduates <span class="date"><time datetime="2009-06">Jun</time> - <time datetime="2009-07">Jul 2009</time></span> <small>(Vanderbilt University)</small>
+                </h3>
+                <p class="card-text">Research Adviser: Dr. Richard Haglund</p>
+                <ul class="exp-details">
+                  <li>Fabricated nanoscale gold metamaterials, analyzed white light extinction spectra. Senior thesis at EKU in May 2010.</li>
+                </ul>
+              </section>
+            </div>
           </div>
-          <hr />
-          <div class="old-exp">
-            <h2>Teaching Experience</h2>
-            <section class="old-exp-section">
-              <ul>
-                <li>Director of Tutoring and Test Prep <span class="date"><time datetime="2016-08">Aug 2016</time> - <time datetime="2017-08">Aug 2017</time></span> <small><a href="https://mathetc.org/" class="inline-anchor" target="_blank">(Math ETC, Bowie, MD)</a></small></li>
-                <li>Supervisor: Johanna Ihegihu</li>
-              </ul>
-              <ul class="exp-details">
-                <li>Hired and supervised instructors, managed scheduling, created curriculum for tutoring students (K – college).</li>
-                <li>Constructed standard procedures to increase the efficiency and functionality of the company.</li>
-                <li>Ran standardized test prep classes, created study curriculum for private school and college entrance exams.</li>
-              </ul>
-            </section>
-            <section class="old-exp-section">
-              <ul>
-                <li>Math Instructor <span class="date"><time datetime="2016-06">Jun</time> - <time datetime="2016-08">Aug 2016</time></span> <small>(Math ETC, Bowie, MD)</small></li>
-                <li>Supervisor: Johanna Ihegihu</li>
-              </ul>
-              <ul class="exp-details">
-                <li>Tutored students in math (K - Calculus) and physics, 10-25 hours/week.</li>
-              </ul>
-            </section>
-            <section class="old-exp-section">
-              <ul>
-                <li>Teaching Assistant and Tutor <span class="date"><time datetime="2010-08">Aug 2010</time> - <time datetime="2012-07">Jul 2012</time></span> <small>(UMBC)</small></li>
-                <li><a href="https://physics.umbc.edu/people/faculty/lili-cui/" class="inline-anchor" target="_blank">Adviser: Dr. Lili Cui</a></li>
-              </ul>
-              <ul class="exp-details">
-                <li>Prepared labs, lead discussions, and constructed assignments using WebAssign and VPython. Assisted the professor during calculus-based intro physics class of 25-100 students. Worked 15-20 hours/week.</li>
-              </ul>
-            </section>
-            <section class="old-exp-section">
-              <ul>
-                <li>Teaching Assistant and Tutor <span class="date"><time datetime="2008-08">Aug 2008</time> - <time datetime="2009-05">May 2009</time></span> <small>(EKU)</small></li>
-              </ul>
-              <ul class="exp-details">
-                <li>Inquiry Physics for Teachers: Assisted the professor with physics exercises for education majors.</li>
-                <li>Tutoring for introductory physics courses was an open session three hours/week.</li>
-              </ul>
-            </section>
+          <div class="old-exp container card my-4">
+            <div class="card-body">
+              <h2 class="card-title">Teaching Experience</h2>
+              <section class="old-exp-section card card-body card-text my-4">
+                  <h3 class="card-title">Director of Tutoring and Test Prep <span class="date"><time datetime="2016-08">Aug 2016</time> - <time datetime="2017-08">Aug 2017</time></span> <small><a href="https://mathetc.org/" class="card-link" target="_blank">(Math ETC, Bowie, MD)</a></small></h3>
+                  <p class="card-text">Supervisor: Johanna Ihegihu</p>
+                <ul class="exp-details">
+                  <li>Hired and supervised instructors, managed scheduling, created curriculum for tutoring students (K – college).</li>
+                  <li>Constructed standard procedures to increase the efficiency and functionality of the company.</li>
+                  <li>Ran standardized test prep classes, created study curriculum for private school and college entrance exams.</li>
+                </ul>
+              </section>
+              <section class="old-exp-section card card-body card-text my-4">
+                <h3>Math Instructor <span class="date"><time datetime="2016-06">Jun</time> - <time datetime="2016-08">Aug 2016</time></span> <small>(Math ETC, Bowie, MD)</small></h3>
+                  <p class="card-text">Supervisor: Johanna Ihegihu</p>
+                <ul class="exp-details">
+                  <li>Tutored students in math (K - Calculus) and physics, 10-25 hours/week.</li>
+                </ul>
+              </section>
+              <section class="old-exp-section card card-body card-text my-4">
+                <h3>Teaching Assistant and Tutor <span class="date"><time datetime="2010-08">Aug 2010</time> - <time datetime="2012-07">Jul 2012</time></span> <small>(UMBC)</small></h3>
+                  <a href="https://physics.umbc.edu/people/faculty/lili-cui/" class="card-text card-link" target="_blank">Adviser: Dr. Lili Cui</a>
+                <ul class="exp-details">
+                  <li>Prepared labs, lead discussions, and constructed assignments using WebAssign and VPython. Assisted the professor during calculus-based intro physics class of 25-100 students. Worked 15-20 hours/week.</li>
+                </ul>
+              </section>
+              <section class="old-exp-section card card-body card-text my-4">
+                  <h3>Teaching Assistant and Tutor <span class="date"><time datetime="2008-08">Aug 2008</time> - <time datetime="2009-05">May 2009</time></span> <small>(EKU)</small></h3>
+                <ul class="exp-details">
+                  <li>Inquiry Physics for Teachers: Assisted the professor with physics exercises for education majors.</li>
+                  <li>Tutoring for introductory physics courses was an open session three hours/week.</li>
+                </ul>
+              </section>
+            </div>
           </div>
         </article>
-        <article class="clearfix" data-title="skills">
+        <article data-title="skills">
           <h2>Skills</h2>
-          <h3>Click a skill to see details.</h3>
-          <div id="skillBox">
+          <h3 class="text-center">Click a skill to see details.</h3>
+          <div id="skillBox" class="list-group">
 
             <script id="skills_template" type="text/x-handlebars">
               {{#each skills}}
@@ -167,9 +150,9 @@
             </script>
 
             <script id="skill_template" data-type="partial" type="text/x-handlebars">
-              <div class="skill">
-                <h3><a href="#" data-skill="{{skill}}">{{heading}}</a></h3>
-                <section class="skill-section" data-skill="{{skill}}">
+              <div class="skill list-group-item p-0">
+                <h3 class="m-0"><a href="#" class="p-3 m-0" data-skill="{{skill}}" data-toggle="collapse", href="#collapse{{heading}}" role="button" aria-expanded="false" aria-controls="#collapse{{heading}}">{{heading}}</a></h3>
+                <section class="skill-section collapse p-3" id="collapse{{heading}}" data-skill="{{skill}}">
                   {{#if other}}
                     <p>{{{otherText}}}</p>
                   {{else}}
@@ -184,21 +167,21 @@
                       </ul>
                     </div>
                     {{#if projects}}
-                      <div class="skill-list projects">
-                        <h4>Apps</h4>
-                        <ul>
+                      <div class="skill-list projects py-3">
+                        <div class="list-group">
+                          <div class="list-group-item"><h4>Apps</h4></div>
                           {{#each projects}}
-                            <li><a href="#" data-id="{{id}}">{{name}}</a></li>
+                            <a class="list-group-item" href="#" data-id="{{id}}">{{name}}</a>
                           {{/each}}
-                        </ul>
+                        </div>
                       </div>
                     {{/if}}
                     {{#if snippets}}
-                      <div class="skill-list projects">
-                        <h4>Snippets</h4>
-                        <ul>
+                      <div class="skill-list projects py-3">
+                        <ul class="list-group list-unstyled">
+                          <li class="list-group-item"><h4>Snippets</h4></li>
                           {{#each snippets}}
-                            <li><a href="#" data-id="{{id}}">{{name}}</a></li>
+                            <li><a class="list-group-item" href="#" data-id="{{id}}">{{name}}</a></li>
                           {{/each}}
                         </ul>
                       </div>
@@ -209,17 +192,17 @@
             </script>
           </div>
         </article>
-        <article class="clearfix projects" data-title="projects">
+        <article data-title="projects">
           <h2>Projects</h2>
           <section class="filters">
-            <h3>Filters</h3>
-            <ul id="project-filter">
+            <h3 class="text-center">Filters</h3>
+            <ul id="project-filter" class="text-center">
               <script id="filters_template" type="text/x-handlebars">
+
                 {{#each filters}}
-                  <li>
-                    <input type="checkbox" id="{{name}}" name="{{name}}" value="{{value}}">
-                    <div class="checkbox" data-name="{{name}}"></div>
-                    <label for="{{name}}">
+                  <li class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="{{name}}" name="{{name}}" value="{{value}}">
+                    <label class="custom-control-label" for="{{name}}">
                       {{text}}
                     </label>
                   </li>
@@ -228,7 +211,7 @@
             </ul>
           </section>
 
-          <h3>Click a card to see details.</h3>
+          <h3 class="text-center">Click a card to see details.</h3>
           <div id="cardBox" class="clearfix">
 
             <script id="cards_template" type="text/x-handlebars">
@@ -279,28 +262,30 @@
 
           </div>
         </article>
-        <article class="contact clearfix" data-title="contact">
-          <h3>Like what you've seen? Think I may enjoy contributing at your company?</h3>
+        <article data-title="contact">
+          <h3 class="text-center">Like what you've seen? Think I may enjoy contributing at your company?</h3>
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeZNJzImDdn9jEYgpRvElGXnyIb5K5mXLAmDSz1ipDTcVaDtQ/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </article>
       </div>
     </main>
   </div>
-  <footer>
-    <ul>
-      <li>
+  <footer class="container-fluid py-4 bg-light">
+    <div class="row justify-content-around">
+      <div class="col-2">
         <a href="https://www.linkedin.com/in/alexhenegar" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-      </li>
-      <li>
+      </div>
+      <div class="col-2">
         <a href="https://medium.com/@alex.henegar" target="_blank"><i class="fa fa-medium" aria-hidden="true"></i></a>
-      </li>
-      <li>
+      </div>
+      <div class="col-2">
         <a href="https://github.com/AJDot" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
-      </li>
-      <li>
+      </div>
+      <div class="col-2">
         <a href="https://codepen.io/ahenegar/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i></a>
-      </li>
-    </ul>
+      </div>
+    </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
