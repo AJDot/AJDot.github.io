@@ -53,8 +53,7 @@ $(function() {
 
     setupMediaQuery: function() {
       if (matchMedia) {
-        // const mq = window.matchMedia("screen and (max-width: 480px)");
-        const mq = window.matchMedia("screen");
+        const mq = window.matchMedia("screen and (max-width: 480px)");
         mq.addListener(App.widthChange.bind(this));
         App.widthChange(mq);
       }
@@ -72,21 +71,17 @@ $(function() {
     revealSection: function(e) {
       e.preventDefault();
       var $section = $(e.currentTarget).closest('section');
-      console.log($section);
       var $others = this.$sections.not($section);
 
-      // $section.addClass(this.activeClassName);
-      // $others.removeClass(this.activeClassName);
+      $section.addClass(this.activeClassName);
+      $others.removeClass(this.activeClassName);
 
-      // $section.find('p').slideDown();
-      // $others.find('p').slideUp();
-
-      $section.toggleClass(this.activeClassName);
-      // $section.find('p').slideToggle();
+      $section.find('p').slideDown();
+      $others.find('p').slideUp();
     },
 
     bindFoldSections: function() {
-      this.$bioBox.on('click', 'h3 > a', this.revealSection.bind(this));
+      this.$bioBox.on('click', 'h3', this.revealSection.bind(this));
     },
 
     unbindFoldSections: function() {
@@ -94,12 +89,12 @@ $(function() {
     },
 
     setupAccordionSections: function() {
-      // this.setupAccordion();
+      this.setupAccordion();
       this.bindFoldSections();
     },
 
     teardownAccordionSections: function() {
-      // this.teardownAccordion();
+      this.teardownAccordion();
       this.unbindFoldSections();
     },
 
@@ -288,7 +283,7 @@ $(function() {
 
     bindEvents: function() {
       $('#project-filter :checkbox').on('change', this.filter.bind(this));
-      // $('#project-filter .checkbox').on('click', this.checkboxChange.bind(this));
+      $('#project-filter .checkbox').on('click', this.checkboxChange.bind(this));
       $(".card-container").on('click', this.flipCard.bind(this));
     },
 
@@ -334,7 +329,6 @@ $(function() {
     templates: {},
     $articles: $('.content article'),
     activeClassName: 'active',
-    bootstrap: true,
 
     cacheTemplates: function() {
       var self = this;
