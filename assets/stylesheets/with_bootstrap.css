@@ -1,0 +1,341 @@
+.content article + article {
+  display: none;
+}
+
+footer {
+  font-size: 1.5em;
+}
+
+.list-group-item h3 > a {
+  display: block;
+}
+
+.list-group-item.active {
+  color: #444444;
+  background: #ffffff;
+  border-color: #444444;
+}
+
+.list-group-item.active h3 {
+  color: #ffffff;
+  background: #444444;
+}
+
+.list-group-item h3:hover {
+  color: #ffffff;
+  background: #444444;
+}
+
+.list-group-item h3 > a {
+  color: #444444;
+}
+
+.list-group-item.active h3 > a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.list-group-item h3:hover > a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a.list-group-item {
+  display: block;
+}
+
+a.list-group-item:hover {
+  color: #ffffff;
+  background: #444444;
+}
+
+/*
+**************************************************
+ Cards
+**************************************************
+*/
+
+#cardBox {
+  margin-top: 1.875rem;
+  text-align: center;
+}
+
+.card-container {
+  display: inline-block;
+  width: 18.75em;
+  height: 25em;
+  border: 1px solid #cccccc;
+  perspective: 1000px;
+}
+
+.card-container.flip .card {
+  transform: rotateY(180deg);
+  transform-origin: 50% 50% -1em;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card .front {
+  transform: rotateY(0deg);
+  cursor: pointer;
+}
+
+.front-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card .back {
+  padding: .625rem;
+  color: #ffffff;
+  background: rgba(69, 69, 69, 0.8);
+  transform: rotateY(180deg) translateZ(2.0em);
+  box-sizing: border-box;
+}
+
+.card .back h3 {
+  margin: 0 0 1.25rem;
+  font-weight: normal;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 2px 3px black, 1px 2px 3px black;
+}
+
+.card .back h4 {
+  display: inline-block;
+  padding-bottom: .3125rem;
+  margin: 0 0 .3125rem;
+  font-size: 1.1em;
+  font-weight: normal;
+  border-bottom: .1875em solid #ffffff;
+  text-shadow: 1px 2px 3px black;
+}
+
+.card .back ul {
+  padding: 0;
+  margin: 0 .625em 1.5625em;
+  list-style: none;
+  text-align: center;
+  font-size: .9em;
+}
+
+.card .back li {
+  margin: 4px 0;
+}
+
+.card .back li::before {
+}
+
+.card iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: top left;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+}
+
+.card img.left {
+  object-position: left;
+}
+
+.card img.top {
+  object-position: top;
+}
+
+.card img.left.top {
+  object-position: left top;
+}
+
+.card .back .card-link {
+  display: block;
+  padding: 6px 4px;
+  margin: .625rem 0;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  transition: color .3s ease, background .3s ease;
+}
+
+.card .back .card-link:hover {
+  color: rgba(69, 69, 69, 0.8);
+  background: #ffffff;
+}
+
+/*
+**************************************************
+ Project Filters
+**************************************************
+*/
+
+#project-filter {
+  padding: 0;
+  margin: 20px 0;
+}
+
+#project-filter li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+/**************************************************/
+/* CONTACT */
+/**************************************************/
+
+[data-title="contact"] iframe {
+  padding: 0;
+  margin: 0;
+  border: none;
+  height: 700px;
+  width: 100%;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, .8);
+}
+
+/**************************************************/
+/* MEDIA QUERIES */
+/**************************************************/
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: .9rem;
+  }
+
+  .container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .card {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .card .card {
+    border: none;
+  }
+
+  .card-body {
+    padding: 0;
+  }
+
+  .card-title {
+    color: #ffffff;
+    background: #444444;
+  }
+
+  .card-text {
+    padding: 0 .5rem;
+  }
+
+  h1 {
+    padding: .3rem;
+    font-size: 1.25em;
+  }
+
+  h2 {
+    padding: .3rem;
+    font-size: 1.1em;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  /**************************************************/
+  /* NAVIGATION */
+  /**************************************************/
+
+  .nav-item span {
+    display: none;
+  }
+
+  .nav-item i {
+    font-size: 1.5em;
+  }
+
+  /**************************************************/
+  /* BIO */
+  /**************************************************/
+
+  .bio section h3 {
+    padding: .625rem;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .bio section h3:hover {
+    color: #ffffff;
+    background: #333333;
+  }
+
+  .bio p {
+    margin: 1em;
+    font-size: .8rem;
+  }
+
+  /**************************************************/
+  /* EDUCATION */
+  /**************************************************/
+
+  .education {
+    padding: .5rem;
+  }
+
+  .education h2 {
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+    color: #ffffff;
+    background: #333333;
+  }
+
+  /**************************************************/
+  /* PROJECTS */
+  /**************************************************/
+
+  #project-filter {
+    text-align: left;
+  }
+
+  #project-filter li {
+    width: 49%;
+    padding: 0 1rem;
+    margin: 0;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  #project-filter::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
