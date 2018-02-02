@@ -2,16 +2,13 @@
   {
     "skill": "ruby",
     "heading": "Ruby",
-    "skill-list-title": "1 year of study through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
+    "skill-list-title": "Studied through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
     "skills": [
-      "Core knowledge: syntax, logic, etc.",
-      "Procedural Programming and OOP, Inheritance",
-      "Instance/Class Variables, blocks/procs/lambdas",
-      "Regular Expressions",
-      "Minitest",
-      "Sinatra",
+      "TDD, Minitest, RSpec, Capybara",
+      "Ruby on Rails, Sinatra",
       "ERB",
-      "Ruby on Rails"
+      "Procedural Programming and OOP, Inheritance",
+      "Instance/Class Variables, blocks/procs/lambdas"
     ],
     "projects": [
       { "id": "2", "name": "PostIt!" },
@@ -22,7 +19,7 @@
   {
     "skill": "ror",
     "heading": "Ruby on Rails",
-    "skill-list-title": "1 month of study through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
+    "skill-list-title": "Studied through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
     "skills": [
       "Core knowledge: syntax, logic, etc.",
       "Active Record and database associations",
@@ -37,7 +34,7 @@
   {
     "skill": "js",
     "heading": "JavaScript",
-    "skill-list-title": "6 months of study through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
+    "skill-list-title": "Studied through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
     "skills": [
       "Core knowledge: syntax, logic, etc.",
       "Primitives & Objects",
@@ -67,11 +64,12 @@
   {
     "skill": "htmlcss",
     "heading": "HTML & CSS",
-    "skill-list-title": "6 months of study through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
+    "skill-list-title": "Studied through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
     "skills": [
-      "Core knowledge: syntax, logic, etc.",
       "Block model",
       "Semantics",
+      "HAML",
+      "Bootstrap",
       "Convert photoshop design files to HTML/CSS"
     ],
     "projects": [
@@ -89,7 +87,7 @@
   {
     "skill": "sql",
     "heading": "SQL",
-    "skill-list-title": "2 months of study through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
+    "skill-list-title": "Studied through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
     "skills": [
       "Core knowledge: syntax, logic, etc.",
       "PostgreSQL (and PG gem)",
@@ -106,12 +104,25 @@
   {
     "skill": "http",
     "heading": "HTTP",
-    "skill-list-title": "",
+    "skill-list-title": "Studied through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
     "skills": [
       "Making requests / processing responses manually",
       "Request/Response Cycle",
       "Stateful Application",
       "Sessions, cookies, AJAX"
+    ]
+  },
+  {
+    "skill": "general",
+    "heading": "General",
+    "skill-list-title": "",
+    "skills": [
+      "Git version control",
+      "Linux (ubuntu)",
+      "Test Driven Development (TDD)",
+      "Exposure to RESTful APIs",
+      "Heroku",
+      "Regular Expressions"
     ]
   },
   {
