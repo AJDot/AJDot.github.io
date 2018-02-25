@@ -226,6 +226,46 @@ header {
 }
 
 /**************************************************/
+/* EDUCATION */
+/**************************************************/
+
+.school {
+  margin-bottom: 1.25rem;
+}
+
+.old-exp-section {
+  margin-bottom: 1.25rem;
+}
+
+.old-exp-section ul {
+  margin-bottom: .625rem;
+}
+
+.old-exp-section li {
+  margin-bottom: .3125rem;
+}
+
+.old-exp-section + .old-exp-section {
+  padding-top: 1rem;
+  border-top: 1px solid #cccccc;
+}
+
+.exp-details li:before {
+  content: "\00BB";
+  padding: 0 .3125rem 0 0;
+}
+
+.resume-link {
+  text-align: center;
+}
+
+.resume-link a {
+  font-weight: bold;
+
+  text-shadow: 0 0 5px #bad6ba, 0 0 5px #bad6ba;
+}
+
+/**************************************************/
 /* SKILL */
 /**************************************************/
 
@@ -555,36 +595,6 @@ article[data-title="skills"] > h3 {
 .card .back .card-link:hover {
   color: rgba(69, 69, 69, 0.8);
   background: #ffffff;
-}
-
-/**************************************************/
-/* EDUCATION */
-/**************************************************/
-
-.school {
-  margin-bottom: 1.25rem;
-}
-
-.old-exp-section {
-  margin-bottom: 1.25rem;
-}
-
-.old-exp-section ul {
-  margin-bottom: .625rem;
-}
-
-.old-exp-section li {
-  margin-bottom: .3125rem;
-}
-
-.old-exp-section + .old-exp-section {
-  padding-top: 1rem;
-  border-top: 1px solid #cccccc;
-}
-
-.exp-details li:before {
-  content: "\00BB";
-  padding: 0 .3125rem 0 0;
 }
 
 /**************************************************/
