@@ -11,6 +11,7 @@
       "Instance/Class Variables, blocks/procs/lambdas"
     ],
     "projects": [
+      { "id": "13", "name": "MyFlix" },
       { "id": "2", "name": "PostIt!" },
       { "id": "11", "name": "Recipe Manager" },
       { "id": "4", "name": "Ruby Terminal Games" }
@@ -25,9 +26,11 @@
       "Active Record and database associations",
       "REST",
       "AJAX",
-      "partials, helpers, filters, form, validations, callbacks, roles"
+      "ActionMailer",
+      "partials, helpers, filters, custom forms, validations, callbacks, roles"
     ],
     "projects": [
+      { "id": "13", "name": "MyFlix" },
       { "id": "2", "name": "PostIt!" }
     ]
   },
@@ -120,9 +123,15 @@
       "Git version control",
       "Linux (ubuntu)",
       "Test Driven Development (TDD)",
-      "Exposure to RESTful APIs",
+      "Continous Integration",
+      "RESTful APIs, 3rd Party APIs",
       "Heroku",
+      "AWS S3",
       "Regular Expressions"
+    ],
+    "projects": [
+      { "id": "13", "name": "MyFlix (TDD, 3rd Party APIs, CI, AWS S3, Heroku)" },
+      { "id": "3", "name": "Dictionary (3rd Party APIs)" }
     ]
   },
   {

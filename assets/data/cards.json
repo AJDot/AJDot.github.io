@@ -1,26 +1,29 @@
 [
   {
-    "id": 1,
-    "name": "Calculator!",
-    "imgSource": "https://drive.google.com/thumbnail?id=1C7RQY_ASCtqR2qfXdEP786AXZE0OPX2g",
+    "id": 13,
+    "name": "MyFlix",
+    "imgSource": "https://drive.google.com/thumbnail?id=1RXVs0SM70jhaJGLI3L95cIAeQBJTjEbD",
+    "imgClasses": "left top",
     "live": {
-      "location": "https://codepen.io/ahenegar/full/ypyGax",
-      "title": "CodePen Live Site"
+      "location": "https://ah-myflix.herokuapp.com/",
+      "title": "Heroku Live Site"
     },
     "source": {
-      "location": "https://codepen.io/ahenegar/pen/ypyGax",
-      "title": "CodePen Source Code"
+      "location": "https://github.com/AJDot/myflix",
+      "title": "GitHub Source Code"
     },
     "skills": [
-      "HTML & CSS",
-      "pure JavaScript"
+      "Ruby on Rails"
     ],
     "features": [
-      "Stack-like input handles multiple operations at once.",
-      "Programmed from scratch with pure JavaScript.",
-      "Clean design"
+      "3rd party API integrations",
+      "Autonomous email delivery",
+      "Credit card processing with Stripe",
+      "Robust TDD with rspec",
+      "AWS S3 for admin upload resources",
+      "Continuous integration"
     ],
-    "filters": ["HTML & CSS", "JavaScript"]
+    "filters": ["Ruby", "Ruby on Rails"]
   },
   {
     "id": 2,
@@ -48,6 +51,30 @@
     "filters": ["Ruby", "Ruby on Rails"]
   },
   {
+    "id": 12,
+    "name": "To-Do Lists",
+    "imgSource": "https://drive.google.com/thumbnail?id=1mxtS-CmJB9HOy2J33hjEqAIlsVoTUdjx",
+    "imgClasses": "top",
+    "live": {
+      "location": "https://preview.c9users.io/ajdot/todo_lists/index.html?_c9_id=livepreview2&_c9_host=https://ide.c9.io",
+      "title": "Cloud9 Live Site"
+    },
+    "source": {
+      "location": "https://ide.c9.io/ajdot/todo_lists",
+      "title": "Cloud9 Source Code"
+    },
+    "skills": [
+      "HTML & CSS",
+      "JavaScript"
+    ],
+    "features": [
+      "Built from scratch",
+      "Utilizes localStorage",
+      "Utilizes Handlebars templates"
+    ],
+    "filters": ["HTML & CSS", "JavaScript"]
+  },
+  {
     "id": 3,
     "name": "Dictionary",
     "imgSource": "https://drive.google.com/thumbnail?id=1v26TEQBWzwVGT-nyNSYfPA7UY7q_Gq9O",
@@ -68,6 +95,52 @@
       "Working with 3rd APIs"
     ],
     "filters": ["HTML & CSS", "JavaScript"]
+  },
+  {
+    "id": 1,
+    "name": "Calculator!",
+    "imgSource": "https://drive.google.com/thumbnail?id=1C7RQY_ASCtqR2qfXdEP786AXZE0OPX2g",
+    "live": {
+      "location": "https://codepen.io/ahenegar/full/ypyGax",
+      "title": "CodePen Live Site"
+    },
+    "source": {
+      "location": "https://codepen.io/ahenegar/pen/ypyGax",
+      "title": "CodePen Source Code"
+    },
+    "skills": [
+      "HTML & CSS",
+      "pure JavaScript"
+    ],
+    "features": [
+      "Stack-like input handles multiple operations at once.",
+      "Programmed from scratch with pure JavaScript.",
+      "Clean design"
+    ],
+    "filters": ["HTML & CSS", "JavaScript"]
+  },
+  {
+    "id": 5,
+    "name": "2D Ising Model",
+    "imgSource": "https://drive.google.com/thumbnail?id=1_QJbDdUdn1l3sHZlz_T1HKa9MCug0HC7",
+    "imgClasses": "left top",
+    "live": {
+      "location": "https://preview.c9users.io/ajdot/ising_model/main.html?_c9_id=livepreview0&_c9_host=https://ide.c9.io",
+      "title": "Cloud9 Live Site"
+    },
+    "source": {
+      "location": "https://github.com/AJDot/ising_model",
+      "title": "GitHub Source Code"
+    },
+    "skills": [
+      "JavaScript"
+    ],
+    "features": [
+      "Physics Simulation",
+      "Complex procedural programming",
+      "Utilization of Canvas API"
+    ],
+    "filters": ["JavaScript"]
   },
   {
     "id": 4,
@@ -94,27 +167,30 @@
     "filters": ["Ruby"]
   },
   {
-    "id": 5,
-    "name": "2D Ising Model",
-    "imgSource": "https://drive.google.com/thumbnail?id=1_QJbDdUdn1l3sHZlz_T1HKa9MCug0HC7",
+    "id": 11,
+    "name": "Recipe Manager",
+    "imgSource": "https://drive.google.com/thumbnail?id=1jJgJE52SLjCZasRzrnj4xE0ddRmN8wtl",
     "imgClasses": "left top",
     "live": {
-      "location": "https://preview.c9users.io/ajdot/ising_model/main.html?_c9_id=livepreview0&_c9_host=https://ide.c9.io",
-      "title": "Cloud9 Live Site"
+      "location": "https://ah-recipe-manager.herokuapp.com/",
+      "title": "Heroku Live Site"
     },
     "source": {
-      "location": "https://github.com/AJDot/ising_model",
+      "location": "https://github.com/AJDot/recipe_manager",
       "title": "GitHub Source Code"
     },
     "skills": [
-      "JavaScript"
+      "HTML & CSS",
+      "Ruby",
+      "SQL"
     ],
     "features": [
-      "Physics Simulation",
-      "Complex procedural programming",
-      "Utilization of Canvas API"
+      "Built from scratch",
+      "Clean designs",
+      "Custom SQL Interface",
+      "Utilizes ERB templates"
     ],
-    "filters": ["JavaScript"]
+    "filters": ["HTML & CSS", "Ruby", "SQL"]
   },
   {
     "id": 6,
@@ -225,56 +301,6 @@
     "features": [
       "Built from scratch",
       "Clean designs"
-    ],
-    "filters": ["HTML & CSS", "JavaScript"]
-  },
-  {
-    "id": 11,
-    "name": "Recipe Manager",
-    "imgSource": "https://drive.google.com/thumbnail?id=1jJgJE52SLjCZasRzrnj4xE0ddRmN8wtl",
-    "imgClasses": "left top",
-    "live": {
-      "location": "https://ah-recipe-manager.herokuapp.com/",
-      "title": "Heroku Live Site"
-    },
-    "source": {
-      "location": "https://github.com/AJDot/recipe_manager",
-      "title": "GitHub Source Code"
-    },
-    "skills": [
-      "HTML & CSS",
-      "Ruby",
-      "SQL"
-    ],
-    "features": [
-      "Built from scratch",
-      "Clean designs",
-      "Custom SQL Interface",
-      "Utilizes ERB templates"
-    ],
-    "filters": ["HTML & CSS", "Ruby", "SQL"]
-  },
-  {
-    "id": 12,
-    "name": "To-Do Lists",
-    "imgSource": "https://drive.google.com/thumbnail?id=1mxtS-CmJB9HOy2J33hjEqAIlsVoTUdjx",
-    "imgClasses": "top",
-    "live": {
-      "location": "https://preview.c9users.io/ajdot/todo_lists/index.html?_c9_id=livepreview2&_c9_host=https://ide.c9.io",
-      "title": "Cloud9 Live Site"
-    },
-    "source": {
-      "location": "https://ide.c9.io/ajdot/todo_lists",
-      "title": "Cloud9 Source Code"
-    },
-    "skills": [
-      "HTML & CSS",
-      "JavaScript"
-    ],
-    "features": [
-      "Built from scratch",
-      "Utilizes localStorage",
-      "Utilizes Handlebars templates"
     ],
     "filters": ["HTML & CSS", "JavaScript"]
   }
