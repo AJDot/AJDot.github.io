@@ -13,6 +13,7 @@
     "projects": [
       { "id": "13", "name": "MyFlix" },
       { "id": "2", "name": "PostIt!" },
+      { "id": "14", "name": "Yelp (Clone)" },
       { "id": "11", "name": "Recipe Manager" },
       { "id": "4", "name": "Ruby Terminal Games" }
     ]
@@ -31,7 +32,8 @@
     ],
     "projects": [
       { "id": "13", "name": "MyFlix" },
-      { "id": "2", "name": "PostIt!" }
+      { "id": "2", "name": "PostIt!" },
+      { "id": "14", "name": "Yelp (Clone)" }
     ]
   },
   {
@@ -131,7 +133,8 @@
     ],
     "projects": [
       { "id": "13", "name": "MyFlix (TDD, 3rd Party APIs, CI, AWS S3, Heroku)" },
-      { "id": "3", "name": "Dictionary (3rd Party APIs)" }
+      { "id": "3", "name": "Dictionary (3rd Party APIs)" },
+      { "id": "14", "name": "Yelp (Clone) (TDD)" }
     ]
   },
   {

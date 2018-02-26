@@ -143,6 +143,26 @@
     "filters": ["JavaScript"]
   },
   {
+    "id": 14,
+    "name": "Yelp (Clone)",
+    "imgSource": "https://drive.google.com/thumbnail?id=1iXNopDkanihsiaGuoAEsB6U8qvU4kG28",
+    "imgClasses": "left top",
+    "source": {
+      "location": "https://github.com/AJDot/yelp_clone",
+      "title": "GitHub Source Code"
+    },
+    "skills": [
+      "Ruby on Rails"
+    ],
+    "features": [
+      "Robust TDD with rspec",
+      "Custom HTML/CSS",
+      "Custom form builder",
+      "Pagination & Flash Messages"
+    ],
+    "filters": ["Ruby", "Ruby on Rails"]
+  },
+  {
     "id": 4,
     "name": "Ruby Terminal Games",
     "imgSource": "https://drive.google.com/thumbnail?id=1CzAyB70OfdUl9ZN3aExH2BVwiYCn2lZR",
