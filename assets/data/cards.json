@@ -173,9 +173,8 @@
     "imgSource": "https://drive.google.com/uc?export=view&id=1zfgyvJOuSIaXZ9ajhKHJyExkq0FBrfqH",
     "imgClasses": "left top",
     "live": {
-      "location": "https://preview.c9users.io/ajdot/ising_model/main.html?_c9_id=livepreview0&_c9_host=https://ide.c9.io",
-      "title": "Cloud9 Live Site",
-      "disabled": true
+      "location": "https://helix-buttery-seeder.glitch.me/main.html",
+      "title": "Glitch Live Site"
     },
     "source": {
       "location": "https://github.com/AJDot/ising_model",
@@ -217,9 +216,8 @@
     "imgSource": "https://drive.google.com/uc?export=view&id=1XTxbLP00POaHUkW_0sos7t4CR9h6ERff",
     "imgClasses": "left top",
     "live": {
-      "location": "https://ide.c9.io/ajdot/ruby_terminal_projects",
-      "title": "Cloud9 Live Site",
-      "disabled": true
+      "location": "https://glitch.com/edit/#!/magnificent-celestial-burn?path=README.md%3A1%3A0",
+      "title": "Glitch Live Site"
     },
     "source": {
       "location": "https://github.com/AJDot/ruby_terminal_projects",
