@@ -67,6 +67,19 @@
     ]
   },
   {
+    "skill": "vuejs",
+    "heading": "Vue JS",
+    "skill-list-title": "While employed at Enovational",
+    "skills": [
+      "4.5 years experience",
+      "Large scale apps including Vuex and VueRouter"
+    ],
+    "projects": [
+      {"id": 15, "name": "Formability"},
+      {"id": 16, "name": "Maryland OneStop"}
+    ]
+  },
+  {
     "skill": "htmlcss",
     "heading": "HTML & CSS",
     "skill-list-title": "Studied through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",

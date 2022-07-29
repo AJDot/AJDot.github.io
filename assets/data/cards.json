@@ -1,12 +1,57 @@
 [
   {
+    "id": 15,
+    "name": "Formability",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1ssZs4Z4qA9s4ZOCBarg_xOLO5D3ZMQ85",
+    "imgClasses": "center top",
+    "live": {
+      "location": "https://formability.com",
+      "title": "Live Site"
+    },
+    "skills": [
+      "Vue JS",
+      "Ruby on Rails",
+      "MongoDB",
+      "HTML & CSS"
+    ],
+    "features": [
+      "Live site used by Maryland state government",
+      "Large project",
+      "Team collaboration"
+    ],
+    "filters": ["HTML & CSS", "JavaScript", "Vue JS", "Ruby on Rails", "Ruby"]
+  },
+  {
+    "id": 16,
+    "name": "Maryland OneStop",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1rzOQs3YhXc49StL1_qoYs4zldn-4Ccdp",
+    "imgClasses": "left top",
+    "live": {
+      "location": "https://onestop.md.gov",
+      "title": "Live Site"
+    },
+    "skills": [
+      "Vue JS",
+      "Ruby on Rails",
+      "MongoDB",
+      "HTML & CSS"
+    ],
+    "features": [
+      "Live site used by Maryland state government",
+      "Large project",
+      "Team collaboration"
+    ],
+    "filters": ["HTML & CSS", "JavaScript", "Vue JS", "Ruby on Rails", "Ruby"]
+  },
+  {
     "id": 13,
     "name": "MyFlix",
-    "imgSource": "https://drive.google.com/thumbnail?id=1RXVs0SM70jhaJGLI3L95cIAeQBJTjEbD",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1RXVs0SM70jhaJGLI3L95cIAeQBJTjEbD",
     "imgClasses": "left top",
     "live": {
       "location": "https://ah-myflix.herokuapp.com/",
-      "title": "Heroku Live Site"
+      "title": "Heroku Live Site",
+      "disabled": true
     },
     "source": {
       "location": "https://github.com/AJDot/myflix",
@@ -28,11 +73,12 @@
   {
     "id": 2,
     "name": "PostIt!",
-    "imgSource": "https://drive.google.com/thumbnail?id=1PvT8fS06oZ6sWG6WNMHP5agkHY8ceBL7",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1TLuFYSqS4hwTjpShgFpzdsIIxldrA-BO",
     "imgClasses": "left top",
     "live": {
       "location": "https://postit-301.herokuapp.com/",
-      "title": "Heroku Live Site"
+      "title": "Heroku Live Site",
+      "disabled": true
     },
     "source": {
       "location": "https://github.com/AJDot/301_postit",
@@ -53,11 +99,12 @@
   {
     "id": 12,
     "name": "To-Do Lists",
-    "imgSource": "https://drive.google.com/thumbnail?id=1mxtS-CmJB9HOy2J33hjEqAIlsVoTUdjx",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1mxtS-CmJB9HOy2J33hjEqAIlsVoTUdjx",
     "imgClasses": "top",
     "live": {
       "location": "https://preview.c9users.io/ajdot/todo_lists/index.html?_c9_id=livepreview2&_c9_host=https://ide.c9.io",
-      "title": "Cloud9 Live Site"
+      "title": "Cloud9 Live Site",
+      "disabled": true
     },
     "source": {
       "location": "https://ide.c9.io/ajdot/todo_lists",
@@ -77,10 +124,11 @@
   {
     "id": 3,
     "name": "Dictionary",
-    "imgSource": "https://drive.google.com/thumbnail?id=1v26TEQBWzwVGT-nyNSYfPA7UY7q_Gq9O",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1okwp8_S3cbhmTiw1kx-gE5qNvTCeFKHf",
     "live": {
       "location": "https://preview.c9users.io/ajdot/dictionary/index.html?_c9_id=livepreview2&_c9_host=https://ide.c9.io",
-      "title": "Cloud9 Live Site"
+      "title": "Cloud9 Live Site",
+      "disabled": true
     },
     "source": {
       "location": "https://github.com/AJDot/dictionary",
@@ -99,7 +147,7 @@
   {
     "id": 1,
     "name": "Calculator!",
-    "imgSource": "https://drive.google.com/thumbnail?id=1C7RQY_ASCtqR2qfXdEP786AXZE0OPX2g",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1ahCQFOZJARyfmjftM9_UfQ_WHwWYfBTq",
     "live": {
       "location": "https://codepen.io/ahenegar/full/ypyGax",
       "title": "CodePen Live Site"
@@ -122,11 +170,12 @@
   {
     "id": 5,
     "name": "2D Ising Model",
-    "imgSource": "https://drive.google.com/thumbnail?id=1_QJbDdUdn1l3sHZlz_T1HKa9MCug0HC7",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1zfgyvJOuSIaXZ9ajhKHJyExkq0FBrfqH",
     "imgClasses": "left top",
     "live": {
       "location": "https://preview.c9users.io/ajdot/ising_model/main.html?_c9_id=livepreview0&_c9_host=https://ide.c9.io",
-      "title": "Cloud9 Live Site"
+      "title": "Cloud9 Live Site",
+      "disabled": true
     },
     "source": {
       "location": "https://github.com/AJDot/ising_model",
@@ -145,7 +194,7 @@
   {
     "id": 14,
     "name": "Yelp (Clone)",
-    "imgSource": "https://drive.google.com/thumbnail?id=1iXNopDkanihsiaGuoAEsB6U8qvU4kG28",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1iXNopDkanihsiaGuoAEsB6U8qvU4kG28",
     "imgClasses": "left top",
     "source": {
       "location": "https://github.com/AJDot/yelp_clone",
@@ -165,11 +214,12 @@
   {
     "id": 4,
     "name": "Ruby Terminal Games",
-    "imgSource": "https://drive.google.com/thumbnail?id=1CzAyB70OfdUl9ZN3aExH2BVwiYCn2lZR",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1XTxbLP00POaHUkW_0sos7t4CR9h6ERff",
     "imgClasses": "left top",
     "live": {
       "location": "https://ide.c9.io/ajdot/ruby_terminal_projects",
-      "title": "Cloud9 Live Site"
+      "title": "Cloud9 Live Site",
+      "disabled": true
     },
     "source": {
       "location": "https://github.com/AJDot/ruby_terminal_projects",
@@ -189,10 +239,10 @@
   {
     "id": 11,
     "name": "Recipe Manager",
-    "imgSource": "https://drive.google.com/thumbnail?id=1jJgJE52SLjCZasRzrnj4xE0ddRmN8wtl",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1jJgJE52SLjCZasRzrnj4xE0ddRmN8wtl",
     "imgClasses": "left top",
     "live": {
-      "location": "https://ah-recipe-manager.herokuapp.com/",
+      "location": "https://nom-nom-notes.herokuapp.com/",
       "title": "Heroku Live Site"
     },
     "source": {
@@ -215,11 +265,12 @@
   {
     "id": 6,
     "name": "Contact Manager",
-    "imgSource": "https://drive.google.com/thumbnail?id=1zE3hIitYxuwhy-zuiNGTP22xglRI3qcO",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1mb2ms1SPCNlzh_-8lC4KwsykQdZuyTef",
     "imgClasses": "top",
     "live": {
       "location": "https://preview.c9users.io/ajdot/contact_manager/index.html?_c9_id=livepreview0&_c9_host=https://ide.c9.io",
-      "title": "Cloud9 Live Site"
+      "title": "Cloud9 Live Site",
+      "disabled": true
     },
     "source": {
       "location": "https://github.com/AJDot/contact_manager",
@@ -240,7 +291,7 @@
   {
     "id": 7,
     "name": "Nutrition Facts Label",
-    "imgSource": "https://drive.google.com/thumbnail?id=1jH4xk_EK8yUlUkwqA_gQJ36f91zC8ana",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1A0ej6UfpwxKU51aGbqDdsvAszgolA_my",
     "imgClasses": "left top",
     "live": {
       "location": "https://codepen.io/ahenegar/full/OzxKKN/",
@@ -262,7 +313,7 @@
   {
     "id": 8,
     "name": "Form Layout",
-    "imgSource": "https://drive.google.com/thumbnail?id=1ins4-5W0zthEC8lHBi3Ip9FE1ye8jiap",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1gpkTGh5NG80eQ8EdbG653sCgXdHK7roH",
     "imgClasses": "top",
     "live": {
       "location": "https://codepen.io/ahenegar/full/OzOLRb/",
@@ -284,11 +335,12 @@
   {
     "id": 9,
     "name": "JS Conf 2014 Clone",
-    "imgSource": "https://drive.google.com/thumbnail?id=13DxGn6ZdAIYMm2YPs58lHLHcY_gOa6z1",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1Kt2qSx5e3bNFUjC8dGwRTectcit-RPvc",
     "imgClasses": "top",
     "live": {
       "location": "https://preview.c9users.io/ajdot/jsconf_br_2014_clone/index.html?_c9_id=livepreview0&_c9_host=https://ide.c9.io",
-      "title": "Cloud9 Live Site"
+      "title": "Cloud9 Live Site",
+      "disabled": true
     },
     "source": {
       "location": "https://github.com/AJDot/jsconf_br_2014_clone",
@@ -308,7 +360,7 @@
   {
     "id": 10,
     "name": "Images Snippets",
-    "imgSource": "https://drive.google.com/thumbnail?id=1L2kCj86FsdGXQIIp7OuYgFJhQ9oqlo91",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1Zi1MJGm6vw9G9GAa07tKk4Ycqc8J8NNS",
     "imgClasses": "left top",
     "live": {
       "location": "https://codepen.io/collection/nYNRvB/",

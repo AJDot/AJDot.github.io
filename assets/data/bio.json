@@ -1,5 +1,13 @@
 [
   {
+    "title": "Today",
+    "paragraphs": [
+      "I have been a software developer for over four years, working on a project that I have seen go from ~20k LOC of code to over 500k LOC with a team that ranged from four to 16 developers. During that time I moved through the ranks from Full-stack Developer to Lead Software Engineer managing a team of up to 5 developers and participating in processes that shaped the future of the application.",
+      "The primary tools I utilized were Vue JS, Typescript, Ruby on Rails, and MongoDB.",
+      "For information on how I landed in software development, see below."
+    ]
+  },
+  {
     "title": "Physics",
     "paragraphs": [
       "My background is in physics. After 10 years of higher education, I received my doctorate in Physics from UMBC. I enjoyed the first years of graduate work; learning and solving physics problems was miserable yet rewarding, tiring but worthwhile. It was the difficulty that made the work appealing and the teamwork with my cohort that made it better. I loved physics, or so I thought.",
@@ -22,7 +30,7 @@
   {
     "title": "What's next?",
     "paragraphs": [
-      "Please explore this site and see what I have accomplished in my one year of learning. Do you think I have potential? I am actively looking for a position in web development and would love to hear about opportunities. Please <a href='#' class='inline-anchor' data-title='contact'>send me a message</a>."
+      "Explore this site and see what I have done. If you would like to contact me, please <a href='#' class='inline-anchor' data-title='contact'>send me a message</a>."
     ]
   }
 ]

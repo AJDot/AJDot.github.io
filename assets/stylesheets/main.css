@@ -221,6 +221,7 @@ header {
   padding: .3rem;
 }
 
+.exp-section .date::before,
 .old-exp-section .date::before {
   content: " / ";
 }
@@ -233,18 +234,22 @@ header {
   margin-bottom: 1.25rem;
 }
 
+.exp-section,
 .old-exp-section {
   margin-bottom: 1.25rem;
 }
 
+.exp-section ul,
 .old-exp-section ul {
   margin-bottom: .625rem;
 }
 
+.exp-section li,
 .old-exp-section li {
   margin-bottom: .3125rem;
 }
 
+.exp-section + .exp-section,
 .old-exp-section + .old-exp-section {
   padding-top: 1rem;
   border-top: 1px solid #cccccc;
@@ -369,13 +374,13 @@ article[data-title="skills"] > h3 {
   display: block;
 }
 
-.skill-list li a {
+.skill-list li .skill-list-item {
   display: block;
   padding: .625em;
   border-top: 1px solid #cccccc;
 }
 
-.skill-list li a:before {
+.skill-list li .skill-list-item:before {
   content: "\00BB";
   padding: 0 .3125rem 0 0;
 }
@@ -743,6 +748,7 @@ footer ul a:hover > i {
     font-size: .9rem;
   }
 
+  .exp-section li,
   .old-exp-section li {
     font-size: .9em;
   }
