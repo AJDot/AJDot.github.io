@@ -126,9 +126,8 @@
     "name": "Dictionary",
     "imgSource": "https://drive.google.com/uc?export=view&id=1okwp8_S3cbhmTiw1kx-gE5qNvTCeFKHf",
     "live": {
-      "location": "https://preview.c9users.io/ajdot/dictionary/index.html?_c9_id=livepreview2&_c9_host=https://ide.c9.io",
-      "title": "Cloud9 Live Site",
-      "disabled": true
+      "location": "https://lohz0u.sse.codesandbox.io",
+      "title": "Code Sandbox Live Site"
     },
     "source": {
       "location": "https://github.com/AJDot/dictionary",
@@ -140,7 +139,7 @@
     ],
     "features": [
       "Making/handling AJAX requests",
-      "Working with 3rd APIs"
+      "Working with 3rd Party APIs"
     ],
     "filters": ["HTML & CSS", "JavaScript"]
   },
