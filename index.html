@@ -3,19 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width initial-scale=1" />
-    <title>Portfolio</title>
+    <title>Alex Henegar | Portfolio</title>
     <link
       href="https://fonts.googleapis.com/css?family=Lato|Montserrat"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/stylesheets/main.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <script src="https://use.fontawesome.com/fd8de1c45c.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascripts/main.js"></script>
   </head>
   <body>
-    <div class="container clearfix">
+    <div class="container">
       <nav>
         <ul>
           <li>
@@ -80,13 +81,18 @@
           </article>
           <article class="education clearfix" data-title="education">
             <p class="resume-link">
-              Click
+              View my
               <a
                 href="https://docs.google.com/document/d/1l-nHDvyJjTM06wEVPkVWhAAz2xpftfpcHB_-FKBPoOE/edit?usp=sharing"
                 target="_blank"
-                >here</a
+                >résumé</a
               >
-              to view my full resume.
+              and
+              <a
+                href="https://docs.google.com/document/d/1i36wfZBQ8M2nydrEUkvpKNleaslTuZ8PIKGx2RE112c/edit?usp=sharing"
+                target="_blank"
+                >CV</a
+              >.
             </p>
             <h2>Education</h2>
             <div class="school">
@@ -137,20 +143,48 @@
             <div class="exp">
               <h2>Employment</h2>
               <section class="exp-section">
+                <h3>
+                  <a href="https://ey.com" class="inline-anchor" target="_blank"
+                    >Ernst & Young LLP</a
+                  >
+                </h3>
                 <ul>
-                  <li><time datetime="2018-03">Mar 2018</time> - Present</li>
+                  <li>
+                    <b>Manager, Technology Consulting, Full-stack Developer</b>
+                    / <time datetime="2022-10">Oct 2022</time> - Present
+                  </li>
+                </ul>
+                <ul class="exp-details">
+                  <li>
+                    Continued development on projects originated at Enovational,
+                    after Enovational was acquired by EY
+                  </li>
+                  <li>
+                    Reduced page render times from 90s down to ~200ms through
+                    optimizing DB calls, index calls, and implementing a custom
+                    system so only visible HTML elements rendered when scrolled
+                    into the viewport.
+                  </li>
+                  <li>
+                    Utilized: Vue JS, Typescript, Ruby on Rails, MongoDB,
+                    Capybara, Cucumber, RSpec
+                  </li>
+                </ul>
+              </section>
+              <section class="exp-section">
+                <h3>Enovational <small>(closed)</small></h3>
+                <ul>
+                  <li>
+                    <span
+                      ><time datetime="2018-03">March 2018</time> -
+                      <time datetime="2022-09">Sep 2022</time></span
+                    >
+                  </li>
                   <li>
                     <b>Lead Software Engineer</b>
                     <span class="date"
-                      ><time datetime="2022-01">Jan 2022</time> - Present</span
-                    >
-                    <small
-                      ><a
-                        href="https://enovational.com"
-                        class="inline-anchor"
-                        target="_blank"
-                        >(Enovational)</a
-                      ></small
+                      ><time datetime="2022-01">Jan 2022</time> -
+                      <time datetime="2022-09">Sep 2022</time></span
                     >
                   </li>
                   <li>
@@ -159,28 +193,12 @@
                       ><time datetime="2019-11">Nov 2019</time> -
                       <time datetime="2022-01">Jan 2022</time></span
                     >
-                    <small
-                      ><a
-                        href="https://enovational.com"
-                        class="inline-anchor"
-                        target="_blank"
-                        >(Enovational)</a
-                      ></small
-                    >
                   </li>
                   <li>
                     <b>Full-stack Developer</b>
                     <span class="date"
                       ><time datetime="2018-03">Mar 2018</time> -
                       <time datetime="2019-11">Nov 2019</time></span
-                    >
-                    <small
-                      ><a
-                        href="https://enovational.com"
-                        class="inline-anchor"
-                        target="_blank"
-                        >(Enovational)</a
-                      ></small
                     >
                   </li>
                 </ul>
@@ -454,7 +472,7 @@
                           <h4>Snippets</h4>
                           <ul>
                             {{#each snippets}}
-                              <li><a href="#" data-id="{{id}}">{{name}}</a></li>
+                              <li><a class="skill-list-item" href="#" data-id="{{id}}">{{name}}</a></li>
                             {{/each}}
                           </ul>
                         </div>
@@ -505,14 +523,17 @@
                     </div>
                     <div class="back">
                       <h3>{{name}}</h3>
+                      {{#if company}}
+                        <h4>{{company}}</h4>
+                      {{/if}}
                       {{#if live}}
                         {{#unless live.disabled}}
                           <a href="{{live.location}}" target="_blank" class="card-link">{{live.title}}</a>
                         {{/unless}}
                       {{/if}}
-                      {{#if source}}
-                        <a href="{{source.location}}" target="_blank" class="card-link">{{source.title}}</a>
-                      {{/if}}
+                      {{#each (wrap source)}}
+                        <a href="{{location}}" target="_blank" class="card-link">{{title}}</a>
+                      {{/each}}
                       <h4>Key Skills</h4>
                       <ul>
                         {{#each skills}}

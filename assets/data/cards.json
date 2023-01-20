@@ -2,6 +2,7 @@
   {
     "id": 15,
     "name": "Formability",
+    "company": "Ernst & Young, Enovational",
     "imgSource": "https://drive.google.com/uc?export=view&id=1ssZs4Z4qA9s4ZOCBarg_xOLO5D3ZMQ85",
     "imgClasses": "center top",
     "live": {
@@ -12,18 +13,27 @@
       "Vue JS",
       "Ruby on Rails",
       "MongoDB",
-      "HTML & CSS"
+      "HTML & CSS",
+      "Cucumber, Capybara, RSpec"
     ],
     "features": [
       "Live site used by Maryland state government",
       "Large project",
       "Team collaboration"
     ],
-    "filters": ["HTML & CSS", "JavaScript", "Vue JS", "Ruby on Rails", "Ruby"]
+    "filters": [
+      "HTML & CSS",
+      "JavaScript",
+      "Vue JS",
+      "Ruby on Rails",
+      "Ruby",
+      "MongoDB"
+    ]
   },
   {
     "id": 16,
     "name": "Maryland OneStop",
+    "company": "Ernst & Young, Enovational",
     "imgSource": "https://drive.google.com/uc?export=view&id=1rzOQs3YhXc49StL1_qoYs4zldn-4Ccdp",
     "imgClasses": "left top",
     "live": {
@@ -34,14 +44,64 @@
       "Vue JS",
       "Ruby on Rails",
       "MongoDB",
-      "HTML & CSS"
+      "HTML & CSS",
+      "Cucumber, Capybara, RSpec"
     ],
     "features": [
       "Live site used by Maryland state government",
       "Large project",
       "Team collaboration"
     ],
-    "filters": ["HTML & CSS", "JavaScript", "Vue JS", "Ruby on Rails", "Ruby"]
+    "filters": [
+      "HTML & CSS",
+      "JavaScript",
+      "Vue JS",
+      "Ruby on Rails",
+      "Ruby",
+      "MongoDB"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Nom Nom Notes",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1TeF1d7KUlwEVIGPCRuG3gYOzYvsQetd0",
+    "imgClasses": "left top",
+    "live": {
+      "location": "https://nom-nom-notes.herokuapp.com/",
+      "title": "Heroku Live Site"
+    },
+    "source": [
+      {
+        "location": "https://github.com/AJDot/nom_nom_notes",
+        "title": "Frontend Source Code"
+      },
+      {
+        "location": "https://github.com/AJDot/nom_nom_notes_api",
+        "title": "Backend Source Code"
+      }
+    ],
+    "skills": [
+      "Vue JS",
+      "Vuex, VueRouter, Vuex ORM",
+      "Ruby on Rails API",
+      "TailwindCSS",
+      "SQL",
+      "Cypress",
+      "RSpec"
+    ],
+    "features": [
+      "Notion-inspired on-the-fly text editor",
+      "Built from scratch",
+      "Clean designs"
+    ],
+    "filters": [
+      "HTML & CSS",
+      "JavaScript",
+      "Vue JS",
+      "Ruby on Rails",
+      "Ruby",
+      "SQL"
+    ]
   },
   {
     "id": 13,
@@ -57,9 +117,7 @@
       "location": "https://github.com/AJDot/myflix",
       "title": "GitHub Source Code"
     },
-    "skills": [
-      "Ruby on Rails"
-    ],
+    "skills": ["Ruby on Rails"],
     "features": [
       "3rd party API integrations",
       "Autonomous email delivery",
@@ -84,9 +142,7 @@
       "location": "https://github.com/AJDot/301_postit",
       "title": "GitHub Source Code"
     },
-    "skills": [
-      "Ruby on Rails"
-    ],
+    "skills": ["Ruby on Rails"],
     "features": [
       "Relational Database & MVC",
       "Partials, Helpers, Filters",
@@ -110,10 +166,7 @@
       "location": "https://ide.c9.io/ajdot/todo_lists",
       "title": "Cloud9 Source Code"
     },
-    "skills": [
-      "HTML & CSS",
-      "JavaScript"
-    ],
+    "skills": ["HTML & CSS", "JavaScript"],
     "features": [
       "Built from scratch",
       "Utilizes localStorage",
@@ -133,10 +186,7 @@
       "location": "https://github.com/AJDot/dictionary",
       "title": "GitHub Source Code"
     },
-    "skills": [
-      "HTML & CSS",
-      "pure JavaScript"
-    ],
+    "skills": ["HTML & CSS", "pure JavaScript"],
     "features": [
       "Making/handling AJAX requests",
       "Working with 3rd Party APIs"
@@ -155,10 +205,7 @@
       "location": "https://codepen.io/ahenegar/pen/ypyGax",
       "title": "CodePen Source Code"
     },
-    "skills": [
-      "HTML & CSS",
-      "pure JavaScript"
-    ],
+    "skills": ["HTML & CSS", "pure JavaScript"],
     "features": [
       "Stack-like input handles multiple operations at once.",
       "Programmed from scratch with pure JavaScript.",
@@ -179,9 +226,7 @@
       "location": "https://github.com/AJDot/ising_model",
       "title": "GitHub Source Code"
     },
-    "skills": [
-      "JavaScript"
-    ],
+    "skills": ["JavaScript"],
     "features": [
       "Physics Simulation",
       "Complex procedural programming",
@@ -198,9 +243,7 @@
       "location": "https://github.com/AJDot/yelp_clone",
       "title": "GitHub Source Code"
     },
-    "skills": [
-      "Ruby on Rails"
-    ],
+    "skills": ["Ruby on Rails"],
     "features": [
       "Robust TDD with rspec",
       "Custom HTML/CSS",
@@ -222,9 +265,7 @@
       "location": "https://github.com/AJDot/ruby_terminal_projects",
       "title": "GitHub Source Code"
     },
-    "skills": [
-      "Ruby"
-    ],
+    "skills": ["Ruby"],
     "features": [
       "Procedural Programming",
       "Object-oriented Programming",
@@ -238,26 +279,19 @@
     "name": "Recipe Manager",
     "imgSource": "https://drive.google.com/uc?export=view&id=1jJgJE52SLjCZasRzrnj4xE0ddRmN8wtl",
     "imgClasses": "left top",
-    "live": {
-      "location": "https://nom-nom-notes.herokuapp.com/",
-      "title": "Heroku Live Site"
-    },
     "source": {
       "location": "https://github.com/AJDot/recipe_manager",
       "title": "GitHub Source Code"
     },
-    "skills": [
-      "HTML & CSS",
-      "Ruby",
-      "SQL"
-    ],
+    "skills": ["HTML & CSS", "Ruby", "SQL"],
     "features": [
       "Built from scratch",
       "Clean designs",
       "Custom SQL Interface",
-      "Utilizes ERB templates"
+      "Utilizes ERB templates",
+      "See Nom Nom Notes for version 2.0"
     ],
-    "filters": ["HTML & CSS", "Ruby", "SQL"]
+    "filters": ["Vue JS", "Ruby on Rails", "SQL"]
   },
   {
     "id": 6,
@@ -273,16 +307,8 @@
       "location": "https://github.com/AJDot/contact_manager",
       "title": "GitHub Source Code"
     },
-    "skills": [
-      "HTML & CSS",
-      "JavaScript"
-    ],
-    "features": [
-      "localStorage",
-      "jQuery",
-      "Asynchronous Filtering",
-      "Tagging"
-    ],
+    "skills": ["HTML & CSS", "JavaScript"],
+    "features": ["localStorage", "jQuery", "Asynchronous Filtering", "Tagging"],
     "filters": ["HTML & CSS", "JavaScript"]
   },
   {
@@ -298,13 +324,8 @@
       "location": "https://codepen.io/ahenegar/pen/OzxKKN/",
       "title": "CodePen Source Code"
     },
-    "skills": [
-      "HTML & CSS"
-    ],
-    "features": [
-      "Class-less CSS",
-      "Pixel precision"
-    ],
+    "skills": ["HTML & CSS"],
+    "features": ["Class-less CSS", "Pixel precision"],
     "filters": ["HTML & CSS"]
   },
   {
@@ -320,13 +341,8 @@
       "location": "https://codepen.io/ahenegar/pen/OzOLRb/",
       "title": "CodePen Source Code"
     },
-    "skills": [
-      "HTML & CSS"
-    ],
-    "features": [
-      "Clean design",
-      "Pixel precision"
-    ],
+    "skills": ["HTML & CSS"],
+    "features": ["Clean design", "Pixel precision"],
     "filters": ["HTML & CSS"]
   },
   {
@@ -343,9 +359,7 @@
       "location": "https://github.com/AJDot/jsconf_br_2014_clone",
       "title": "GitHub Source Code"
     },
-    "skills": [
-      "HTML & CSS"
-    ],
+    "skills": ["HTML & CSS"],
     "features": [
       "Clean design",
       "Pixel precision",
@@ -363,14 +377,8 @@
       "location": "https://codepen.io/collection/nYNRvB/",
       "title": "CodePen Collection"
     },
-    "skills": [
-      "HTML & CSS",
-      "JavaScript"
-    ],
-    "features": [
-      "Built from scratch",
-      "Clean designs"
-    ],
+    "skills": ["HTML & CSS", "JavaScript"],
+    "features": ["Built from scratch", "Clean designs"],
     "filters": ["HTML & CSS", "JavaScript"]
   }
 ]

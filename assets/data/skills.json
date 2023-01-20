@@ -2,7 +2,7 @@
   {
     "skill": "ruby",
     "heading": "Ruby",
-    "skill-list-title": "Studied through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
+    "skill-list-title": "<a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>, Enovational, <a href='https://ey.com' class='inline-anchor' target='_blank'>EY</a>",
     "skills": [
       "TDD, Minitest, RSpec, Capybara",
       "Ruby on Rails, Sinatra",
@@ -11,17 +11,18 @@
       "Instance/Class Variables, blocks/procs/lambdas"
     ],
     "projects": [
+      { "id": "17", "name": "Nom Nom Notes" },
+      { "id": "11", "name": "Recipe Manager" },
       { "id": "13", "name": "MyFlix" },
       { "id": "2", "name": "PostIt!" },
       { "id": "14", "name": "Yelp (Clone)" },
-      { "id": "11", "name": "Recipe Manager" },
       { "id": "4", "name": "Ruby Terminal Games" }
     ]
   },
   {
     "skill": "ror",
     "heading": "Ruby on Rails",
-    "skill-list-title": "Studied through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
+    "skill-list-title": "<a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>, Enovational, <a href='https://ey.com' class='inline-anchor' target='_blank'>EY</a>",
     "skills": [
       "Core knowledge: syntax, logic, etc.",
       "Active Record and database associations",
@@ -31,6 +32,9 @@
       "partials, helpers, filters, custom forms, validations, callbacks, roles"
     ],
     "projects": [
+      { "id": "17", "name": "Nom Nom Notes" },
+      { "id": "15", "name": "Formability" },
+      { "id": "16", "name": "Maryland OneStop" },
       { "id": "13", "name": "MyFlix" },
       { "id": "2", "name": "PostIt!" },
       { "id": "14", "name": "Yelp (Clone)" }
@@ -39,7 +43,7 @@
   {
     "skill": "js",
     "heading": "JavaScript",
-    "skill-list-title": "Studied through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
+    "skill-list-title": "<a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>, Enovational, <a href='https://ey.com' class='inline-anchor' target='_blank'>EY</a>",
     "skills": [
       "Core knowledge: syntax, logic, etc.",
       "Primitives & Objects",
@@ -62,27 +66,27 @@
       { "id": "6", "name": "Contact Manager" },
       { "id": "5", "name": "2D Ising Model" }
     ],
-    "snippets": [
-      { "id": "10", "name": "Image Snippets" }
-    ]
+    "snippets": [{ "id": "10", "name": "Image Snippets" }]
   },
   {
     "skill": "vuejs",
     "heading": "Vue JS",
-    "skill-list-title": "While employed at Enovational",
+    "skill-list-title": "Enovational, <a href='https://ey.com' class='inline-anchor' target='_blank'>EY</a>",
+
     "skills": [
       "4.5 years experience",
       "Large scale apps including Vuex and VueRouter"
     ],
     "projects": [
-      {"id": 15, "name": "Formability"},
-      {"id": 16, "name": "Maryland OneStop"}
+      { "id": 15, "name": "Formability" },
+      { "id": 16, "name": "Maryland OneStop" },
+      { "id": "17", "name": "Nom Nom Notes" }
     ]
   },
   {
     "skill": "htmlcss",
     "heading": "HTML & CSS",
-    "skill-list-title": "Studied through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
+    "skill-list-title": "<a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>, Enovational, <a href='https://ey.com' class='inline-anchor' target='_blank'>EY</a>",
     "skills": [
       "Block model",
       "Semantics",
@@ -100,12 +104,11 @@
       { "id": "8", "name": "Form Layout" },
       { "id": "10", "name": "Image Snippets" }
     ]
-
   },
   {
     "skill": "sql",
     "heading": "SQL",
-    "skill-list-title": "Studied through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
+    "skill-list-title": "<a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
     "skills": [
       "Core knowledge: syntax, logic, etc.",
       "PostgreSQL (and PG gem)",
@@ -116,13 +119,28 @@
       "Create database-back web applications"
     ],
     "projects": [
+      { "id": "17", "name": "Nom Nom Notes" },
       { "id": "11", "name": "Recipe Manager" }
+    ]
+  },
+  {
+    "skill": "nosql",
+    "heading": "NoSQL",
+    "skill-list-title": "Enovational, <a href='https://ey.com' class='inline-anchor' target='_blank'>EY</a>",
+    "skills": [
+      "MongoDB (and Mongoid gem)",
+      "Aggregations",
+      "Relational vs Document styled DB"
+    ],
+    "projects": [
+      { "id": "15", "name": "Formability" },
+      { "id": "16", "name": "Maryland OneStop" }
     ]
   },
   {
     "skill": "http",
     "heading": "HTTP",
-    "skill-list-title": "Studied through <a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>",
+    "skill-list-title": "<a href='https://www.launchschool.com' class='inline-anchor' target='_blank'>Launch School</a>, Enovational, <a href='https://ey.com' class='inline-anchor' target='_blank'>EY</a>",
     "skills": [
       "Making requests / processing responses manually",
       "Request/Response Cycle",
@@ -145,7 +163,10 @@
       "Regular Expressions"
     ],
     "projects": [
-      { "id": "13", "name": "MyFlix (TDD, 3rd Party APIs, CI, AWS S3, Heroku)" },
+      {
+        "id": "13",
+        "name": "MyFlix (TDD, 3rd Party APIs, CI, AWS S3, Heroku)"
+      },
       { "id": "3", "name": "Dictionary (3rd Party APIs)" },
       { "id": "14", "name": "Yelp (Clone) (TDD)" }
     ]
