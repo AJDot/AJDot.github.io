@@ -104,29 +104,17 @@
     ]
   },
   {
-    "id": 13,
-    "name": "MyFlix",
-    "imgSource": "https://drive.google.com/uc?export=view&id=1RXVs0SM70jhaJGLI3L95cIAeQBJTjEbD",
+    "id": 18,
+    "name": "Project Chihuahua",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1K2FSKEaE7ZRLkQFrT2rR6asDUKJ-kaTt",
     "imgClasses": "left top",
-    "live": {
-      "location": "https://ah-myflix.herokuapp.com/",
-      "title": "Heroku Live Site",
-      "disabled": true
-    },
     "source": {
-      "location": "https://github.com/AJDot/myflix",
+      "location": "https://github.com/AJDot/project_chihuahua",
       "title": "GitHub Source Code"
     },
-    "skills": ["Ruby on Rails"],
-    "features": [
-      "3rd party API integrations",
-      "Autonomous email delivery",
-      "Credit card processing with Stripe",
-      "Robust TDD with rspec",
-      "AWS S3 for admin upload resources",
-      "Continuous integration"
-    ],
-    "filters": ["Ruby", "Ruby on Rails"]
+    "skills": ["Vue JS", "TailwindCSS", "Electron (minor usage)"],
+    "features": ["Minimal pixel art editor", "Built from scratch"],
+    "filters": ["HTML & CSS", "JavaScript", "Vue JS"]
   },
   {
     "id": 2,
@@ -233,6 +221,31 @@
       "Utilization of Canvas API"
     ],
     "filters": ["JavaScript"]
+  },
+  {
+    "id": 13,
+    "name": "MyFlix",
+    "imgSource": "https://drive.google.com/uc?export=view&id=1RXVs0SM70jhaJGLI3L95cIAeQBJTjEbD",
+    "imgClasses": "left top",
+    "live": {
+      "location": "https://ah-myflix.herokuapp.com/",
+      "title": "Heroku Live Site",
+      "disabled": true
+    },
+    "source": {
+      "location": "https://github.com/AJDot/myflix",
+      "title": "GitHub Source Code"
+    },
+    "skills": ["Ruby on Rails"],
+    "features": [
+      "3rd party API integrations",
+      "Autonomous email delivery",
+      "Credit card processing with Stripe",
+      "Robust TDD with rspec",
+      "AWS S3 for admin upload resources",
+      "Continuous integration"
+    ],
+    "filters": ["Ruby", "Ruby on Rails"]
   },
   {
     "id": 14,

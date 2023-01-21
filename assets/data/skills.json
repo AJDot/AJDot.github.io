@@ -60,6 +60,7 @@
       "Handlebars"
     ],
     "projects": [
+      { "id": "18", "name": "Project Chihuahua" },
       { "id": "1", "name": "Calculator" },
       { "id": "3", "name": "Dictionary" },
       { "id": "12", "name": "To-Do Lists" },
@@ -74,8 +75,8 @@
     "skill-list-title": "Enovational, <a href='https://ey.com' class='inline-anchor' target='_blank'>EY</a>",
 
     "skills": [
-      "4.5 years experience",
-      "Large scale apps including Vuex and VueRouter"
+      "5 years experience",
+      "Large-scale apps including Vuex and VueRouter"
     ],
     "projects": [
       { "id": 15, "name": "Formability" },
@@ -92,10 +93,12 @@
       "Semantics",
       "HAML",
       "Bootstrap",
+      "TailwindCSS",
       "Convert photoshop design files to HTML/CSS"
     ],
     "projects": [
       { "id": "11", "name": "Recipe Manager" },
+      { "id": "18", "name": "Project Chihuahua" },
       { "id": "12", "name": "To-Do Lists" },
       { "id": "9", "name": "JS Conf BR 2014 Clone" }
     ],
